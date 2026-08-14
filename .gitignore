@@ -1,0 +1,26 @@
+# Environment / secrets
+.env
+.env.*
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# Java / Maven
+target/
+.classpath
+.project
+.settings/
+
+# Test reports
+test-output/
+allure-results/
+allure-report/
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
