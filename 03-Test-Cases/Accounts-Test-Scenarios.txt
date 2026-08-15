@@ -1,0 +1,27 @@
+| Scenario ID | Requirement ID | Test Scenario                                   |
+| ----------- | -------------- | ----------------------------------------------- |
+| TS-ACC-001  | FR-ACC-001     | Verify user can access Accounts module          |
+| TS-ACC-002  | FR-ACC-002     | Verify Accounts list displays existing accounts |
+| TS-ACC-003  | FR-ACC-003     | Verify user can create a new account            |
+| TS-ACC-004  | FR-ACC-004     | Verify Account Name field                       |
+| TS-ACC-005  | FR-ACC-005     | Verify Website field                            |
+| TS-ACC-006  | FR-ACC-006     | Verify Phone field                              |
+| TS-ACC-007  | FR-ACC-007     | Verify Email field                              |
+| TS-ACC-008  | FR-ACC-008     | Verify Description field                        |
+| TS-ACC-009  | FR-ACC-009     | Verify Billing Address                          |
+| TS-ACC-010  | FR-ACC-010     | Verify Shipping Address                         |
+| TS-ACC-011  | FR-ACC-011     | Verify account can be saved                     |
+| TS-ACC-012  | FR-ACC-012     | Verify account creation can be cancelled        |
+| TS-ACC-013  | FR-ACC-013     | Verify account input validation                 |
+| TS-ACC-014  | FR-ACC-014     | Verify validation/error messages                |
+| TS-ACC-015  | FR-ACC-015     | Verify account search functionality             |
+| TS-ACC-016  | FR-ACC-016     | Verify account filtering functionality          |
+| TS-ACC-017  | FR-ACC-017     | Verify account details can be viewed            |
+| TS-ACC-018  | FR-ACC-018     | Verify existing account can be edited           |
+| TS-ACC-019  | FR-ACC-019     | Verify account can be deleted with confirmation |
+| TS-ACC-020  | FR-ACC-020     | Verify account duplication functionality        |
+| TS-ACC-021  | FR-ACC-021     | Verify Personal Data can be viewed              |
+| TS-ACC-022  | FR-ACC-022     | Verify Followers can be viewed                  |
+| TS-ACC-023  | FR-ACC-023     | Verify Audit Log can be viewed                  |
+| TS-ACC-024  | FR-ACC-024     | Verify User Access can be viewed                |
+| TS-ACC-025  | FR-ACC-025     | Verify account locking functionality            |
