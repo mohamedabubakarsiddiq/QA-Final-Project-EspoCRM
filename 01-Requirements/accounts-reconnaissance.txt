@@ -1,0 +1,55 @@
+EspoCRM QA Automation
+Accounts Module – Initial Reconnaissance
+
+Date: 15-Aug-2026
+
+1. Module Accessibility
+- Accounts module accessible: Yes
+- URL: http://localhost:8081/#Account
+
+2. List Page
+- Account list available: Available
+- Create button: Available
+- Search: Available
+- Filters: Available
+
+3. Create Account
+- Account Name: Available
+- Website: Available
+- Phone: Available
+- Email: Available
+- Description: Available
+- Billing Address: Available
+- Shipping Address: Available
+- Save: Available
+- Cancel: Available
+
+4. Mandatory Fields
+- Field(s): To be identified during detailed validation testing
+
+5. Validation
+- Invalid data validation: Available
+- Error messages: Available
+
+6. Record Actions
+- View: Available
+- Edit: Available
+- Delete: Available
+- Delete confirmation: Available
+
+7. Initial QA Observations
+- After creating an account, the record can be viewed.
+- Account can be edited and deleted.
+- Duplicate functionality is available.
+- Personal Data can be viewed separately.
+- Followers can be viewed.
+- Audit Log can be accessed.
+- User Access can be viewed.
+- Account can be locked.
+
+8. Questions / Items Requiring Further Testing
+- Identify all mandatory fields.
+- Verify validation rules for each input field.
+- Verify duplicate account behavior.
+- Verify delete and delete-confirmation behavior.
+- Verify Personal Data, Followers, Audit Log, User Access and Lock functionality.
