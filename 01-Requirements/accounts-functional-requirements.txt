@@ -1,0 +1,27 @@
+| ID         | Functional Requirement                                                       |
+| ---------- | ---------------------------------------------------------------------------- |
+| FR-ACC-001 | User shall be able to access the Accounts module.                            |
+| FR-ACC-002 | System shall display the list of existing accounts.                          |
+| FR-ACC-003 | User shall be able to create a new account.                                  |
+| FR-ACC-004 | Account Name shall be available during account creation.                     |
+| FR-ACC-005 | User shall be able to enter website information for an account.              |
+| FR-ACC-006 | User shall be able to enter phone information for an account.                |
+| FR-ACC-007 | User shall be able to enter email information for an account.                |
+| FR-ACC-008 | User shall be able to enter an account description.                          |
+| FR-ACC-009 | User shall be able to enter billing address information.                     |
+| FR-ACC-010 | User shall be able to enter shipping address information.                    |
+| FR-ACC-011 | User shall be able to save a new account.                                    |
+| FR-ACC-012 | User shall be able to cancel account creation.                               |
+| FR-ACC-013 | System shall validate account input data.                                    |
+| FR-ACC-014 | System shall display appropriate validation/error messages for invalid data. |
+| FR-ACC-015 | User shall be able to search for accounts.                                   |
+| FR-ACC-016 | User shall be able to filter the account list.                               |
+| FR-ACC-017 | User shall be able to view an account.                                       |
+| FR-ACC-018 | User shall be able to edit an existing account.                              |
+| FR-ACC-019 | User shall be able to delete an account with confirmation.                   |
+| FR-ACC-020 | User shall be able to duplicate an account.                                  |
+| FR-ACC-021 | User shall be able to view account Personal Data.                            |
+| FR-ACC-022 | User shall be able to view account Followers.                                |
+| FR-ACC-023 | User shall be able to view the account Audit Log.                            |
+| FR-ACC-024 | User shall be able to view account User Access information.                  |
+| FR-ACC-025 | User shall be able to lock an account.                                       |
