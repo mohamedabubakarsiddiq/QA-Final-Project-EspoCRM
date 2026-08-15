@@ -1,0 +1,575 @@
+ESPOCRM INITIAL QA RECONNAISSANCE
+=================================
+
+Module: Dashboard
+Observations: 
+
+In Dashboard: it's displaying on top right corner "Search", "History", "Add", "under add-Account, contact, Lead, Opportunity, Meeting, Call, task, Case, Email", "Notification- under notification - Mark all read", "three point button - in this Admin, Administration, Preferences, About and logout"  
+
+In body: there are two separate tabs - "Stream" and "My activities"
+
+-
+
+Module: Accounts
+Observations:
+
+In Accounts: it's displaying on top right corner "Search", "History", "Add", "under add-Account, contact, Lead, Opportunity, Meeting, Call, task, Case, Email", "Notification- under notification - Mark all read", "three point button - in this Admin, Administration, Preferences, About and logout" 
+
+There is a search bar in the body, which has a dropdown list displaying "All, Starred, Recently created, Only My and Followed" and search button.
+
+There is another button "create Account" which redirects to another page to create a new account.
+
+There is Fields Dropdown List:
+	1. Accounts
+	2. Email
+	3. Phone	
+	4. Assigned User
+	5. Column resize 
+
+Pagination option </>
+
+
+Account>Create:
+
+It has following options and text boxes to give input:
+
+Save button and Cancel button and three button-> Save& Continue Editing and Save & New
+
+Overview:
+1. Name
+2. Website
+3. Email / opt out button / invalid button
+4. Phone
+	There is a dropdown list displaying:
+		4.1. Office
+		4.2. Mobile
+		4.3. fax
+		4.4. Other
+	Number entering box 
+5. Billing Address
+	5.1 Street
+	5.2 City
+	5.3 State	
+	5.4 postal Code
+	5.5 Country
+6. Shipping Address
+	6.1 Street
+	6.2 City
+	6.3 State
+	6.4 postal Code	
+	6.5 Country
+7. Details
+	7.1 Type
+	7.2 Industry	
+	7.3 Description
+8. Assigned User
+9. Teams
+ 
+
+-
+
+Module: Contacts
+Observations: 
+
+In Accounts: it's displaying on top right corner "Search", "History", "Add", "under add-Account, contact, Lead, Opportunity, Meeting, Call, task, Case, Email", "Notification- under notification - Mark all read", "three point button - in this Admin, Administration, Preferences, About and logout" 
+
+There is a search bar in the Contacts body which has a 
+1. dropdown list:
+	1.1. All
+	1.2. Starred
+	1.3. portal users
+	1.4. only me
+	1.5. Followed
+2. Search Button
+3. Three Button:
+	3.1 Assigned User
+	3.2 teams
+	3.3 Created At
+	3.4 Created By
+	3.5 Modified At
+	3.6 Stream Updated At
+	3.7 Accounts
+	3.8 Address
+	3.9 Email
+	3.10 Phone
+	3.11 Account title
+	3.12 target Lists	
+	3.13 Campaign
+
+There is Fields Dropdown List:
+	1. Accounts
+	2. Email
+	3. Phone	
+	4. Assigned User
+	5. Column resize 
+
+Pagination option </>
+
+Create Contact:
+
+Contacts> Create 
+save button > Cancel Button > Save & Continue Editing > Save & New
+
+1. Name
+	1.1 title Dropdown
+		|-> Mr.
+		|-> Ms.
+		|-> Mrs.
+		|-> Dr.
+	1.2 First name 
+	1.3 Last Name
+2. Accounts
+3.Email>Opt out > Invalid
+4. Phone 
+	4.1 mobile
+	4.2 Office
+	4.3 Home
+	4.4 Fax
+	4.5 Other
+5. Address
+	5.1 Street	
+	5.2 City 
+	5.3 State
+	5.4 postal Code
+	5.5 Country	
+	5.6 Description
+6. Assigned User
+7. Teams
+
+-
+
+Module: Leads
+Observations:
+
+it's displaying on top right corner "Search", "History", "Add", "under add-Account, contact, Lead, Opportunity, Meeting, Call, task, Case, Email", "Notification- under notification - Mark all read", "three point button - in this Admin, Administration, Preferences, About and logout" 
+
+There is Search bar for leads which has the following
+1. Dropdown list
+	1.1 All
+	1.2 open
+	1.3 Converted
+	1.4 Only My
+	1.5 Followed
+2. Search Button
+3. three dot button
+	Add Field:
+	3.1 Assigned User
+	3.2 teams	
+	3.3 Created At
+	3.4 Created By	
+	3.5 Modified At
+	3.6 Stream Updated At
+	3.7 Address
+	3.8 Account Name
+	3.9 Campaign
+	3.10 Email
+	3.11 Phone
+	3.12 Status
+	3.13 Source
+	3.14 Opportunity Amount (converted)
+	3.15 Industry
+	3.16 Target Lists
+	3.17 Account
+There is fields dropdown list which has the option to select multiple fields in the list. List contains the following fields:
+Status 
+2. Email
+3. Phone 
+4. Source
+5. Assigned User
+6. Created At
+7. Column resize
+once we select the field there is addition option enabled - Reset 
+
++Create Lead Button
+	once we click this button it redirects to 
+Leads>create
+
+save button > Cancel Button > Save & Continue Editing > Save & New
+
+There is a text input boxes : Overview which has the following text boxes to give input
+
+Name
+	1.1 Mr.
+	1.2 Ms.
+	1.3 Mrs.
+	1.4 Dr.
+2. Account Name
+3. Email > Opt Out > Invalid
+4. Phone > opt out > Invalid
+	4.1 Mobile
+	4.2 office	
+	4.3 Fax
+	4.4 Other	
+5. Title
+6. Website
+7. Address
+	7.1 Street
+	7.2 City	
+	7.3 State
+	7.4 Postal Code
+	7.5 Country
+8. Details
+	8.1 Status
+	New 
+Assigned
+In process
+Converted
+recycled
+Dead
+	8.2 Source
+call 
+Email
+Existing Customer
+Partner
+Public Relations
+Web Site
+Campaign
+others
+	8.3 Opportunity Amount
+	8.4 Campaign: has a additional options to add details and cancel button
+When Addition button clicked it redirected to another page to select or add new campaigns details, opened page has the following options
+cancel Button	
+create Button
+A search bar to select existing details
+there is a dropdown list available in the search bar which has the following list
+All
+Active
+Selectable option Only My
+Search button
+Three dot button, which has the following fields
+Assigned user
+teams
+Created At
+created By
+Modified At
+Type
+Status
+End Date
+	
+When + Create button clicked it opens another page as follows
+
+create campaign
+Save button / Cancel Button
+Name text box
+Type dropDown list
+Email
+News letter
+informational Email
+Web
+television
+radio
+Other
+Status
+Planning
+Active
+Inactive
+Complete
+End date: which has a calender pop up
+Assigned User:  which is a selectable, when we click select it opens another page which has the following  :
+Select . users
+cancel Button
+
+A search bar with dropdown list
+All
+Active
+Selectable field Only My Team
+Search Button
+three dot Button which has the following list of fields
+Teams
+Created At
+created By
+Email
+Title
+Type
+Is Active
+Position in Team
+Portals
+Accounts
+Contact
+This page has the list With tiles as follows: Name | user Name | Email
+
+When the user clicks X button application redirects to Create Campaign
+
+Teams : which is a selectable, when we click select it opens another page
+Select.Teams
+
+Select is disabled because of no data available, Cancel Button available
+
+Search box with dropdown list 
+All
+only My
+Search Button	
+
+
+-
+
+Module: Opportunities
+Observations:
+
+
+it's displaying on top right corner "Search", "History", "Add", "under add-Account, contact, Lead, Opportunity, Meeting, Call, task, Case, Email", "Notification- under notification - Mark all read", "three point button - in this Admin, Administration, Preferences, About and logout"
+
+There is Search bar for leads which has the following
+1. Dropdown list
+	1.1 All
+	1.2 open
+	1.3 Won
+	1.4 Only My
+	1.5 Followed
+2. Search Button
+3. three dot button
+	Add Field:
+	3.1 Assigned User
+	3.2 teams
+	3.3 Created At
+	3.4 Created By
+	3.5 Modified At
+	3.6 Stream Updated At
+	3.7 Account
+	3.8 Amount (Converted)
+	3.9 Amount Weighted
+	3.10 Campaign
+	3.11 Close date
+	3.12 Contacts
+	3.13 Lead Source
+	3.14 Probability, %
+	3.15 Stage
+	3.16 Description
+
+There is fields dropdown list which has the option to select multiple fields in the list. List contains the following fields:
+Account
+2. Stage
+3. Assigned User
+4. Created At
+5.  Close Date
+6. Amount
+7. Column resize
+once we select the field there is addition option enabled - Reset
+
+
+There is two view options button available in the right side
+List
+Kanban
+
+There is create new Opportunity Button available once we click it opens new page:
+
+Opportunities>Create
+
+Save button | Cancel button | Save & Continue Editing | Save & New
+
+In this page has the following text input boxes:
+Name
+Account: Once we click accounts select option it redirects to another page to select account which has the following options
+
+Cancel button
+Search Bar : Which has the following options
+	1. Dropdown list
+		* All
+		* Starred
+		* Recently Created
+		* Only My
+		* Followed
+Search button
+Three dot button which is used to add field
+	Assigned User
+Teams 
+Created At 
+Created By
+Modified At
+Stream updated At
+Type
+industry
+Description
+Email
+Phone
+target lists
+Country
+Billing Address
+Website
+Campaign
+
++ create button
+Create Account
+	1. name 
+	2. Website
+	3. Email / opt out / Invalid
+	4. Phone / opt out / Invalid
+		* Office
+		* Mobile
+		* fax
+		* other	
+	5. City
+	6. Country
+	7. type: Dropdown List
+		* Customer
+		* Investor
+		* Partner
+		* Reseller
+	8. Industry: Dropdown List
+		* Advertising
+		* Aerospace
+		* Agriculture
+		* Apparel & Accessories
+		* Architecture
+		* Automotive
+		* Banking
+		* Biotechnology
+		* Building Materials & Equipment
+		* Chemical
+		* Computer
+		* Construction
+		* Consulting
+		* Creative
+		* Culture
+		* Defense
+		* Education
+		* Electric Power
+		* Electronics
+		* Energy
+		* Entertainment & Leisure
+		* Finance
+		* Food & Beverage
+		* Grocery
+		* Healthcare
+		* Hospitality
+		* Insurance
+		* Legal
+		* manufacturing
+		* Marketing
+		* Mass media
+		* Mining
+		* Music
+		* Petroleum
+		* Publishing
+		* Real Estate
+		* retail
+		* Service
+		* software
+		* sports
+		* support
+		* technology
+		* telecommunications
+		* Television
+		* Test, Inspection & Certification
+		* Transportation
+		* Travel
+		* Venture Capital
+		* Water
+	9. Description
+	10. Assigned user: to select Assigned user it redirects to another page which has the list of users.
+This page has the following:
+	* Cancel Button
+	* Dropdown list
+		- All
+		- Active
+		- Only My Team
+	* Search Button	
+	* Three Dot button to add field	
+		- Teams
+		- Created At
+		- created By
+		- Email
+		- Title
+		- Type
+		- Is Active
+		- Position in team
+		- portals
+		- Accounts
+		- Contact
+	** Has a table list contains
+		NAME | User Name | Email
+	11. Teams: to select teams it redirects to another page as follows
+		* Select Button
+		* Cancel Button
+		* Search Bar which has the following buttons or options
+		- All
+		- Only My
+		- Search Button
+		- Three dot button
+		
+3. Stage: Dropdown List
+	* Prospecting
+	* Qualification
+	* Proposal
+	* Negotiation
+	* Closed Won
+	* Closed Lost
+4. Amount: 
+	* Text Box
+	* USD (Currency Type)
+5.Probability, %:
+	* Text Box
+6. Close Date: 
+	* Calendar Pop Up
+7. Contacts: Which redirects to another page has the following buttons and options
+	* Select Button
+	* Cancel Button
+	* Search Bar has the following options
+		- Dropdown List
+			~All
+			~Starred
+			~Portal User
+			~Only my
+			~Followed
+	* Search Text box
+	* Search Button
+	* Three Dot button
+		- Assigned User
+		- teams
+		- Created At
+		- Created By
+		- Modified At
+		- Stream Updated At
+		- Accounts
+		- Address
+		- Email
+		- Phone
+		- Account Title
+		- Target List
+		- Campaign 
+8. Lead Source: Dropdown list
+	* Call
+	* Email
+	* Existing customer
+	* Partner
+	* Public relations
+	* Web Site
+	* Campaign
+	* Other
+9. Description: Text box
+10.  Assigned user: to select Assigned user it redirects to another page which has the list of users.
+This page has the following:
+	* Cancel Button
+	* Dropdown list
+		- All
+		- Active
+		- Only My Team
+	* Search Button
+	* Three Dot button to add field
+		- Teams
+		- Created At
+		- created By
+		- Email
+		- Title
+		- Type
+		- Is Active
+		- Position in team
+		- portals
+		- Accounts
+		- Contact
+	** Has a table list contains
+		NAME | User Name | Email
+11. Teams: to select teams it redirects to another page as follows
+		* Select Button
+		* Cancel Button
+		* Search Bar which has the following buttons or options
+		- All
+		- Only My
+		- Search Button
+		- Three dot button
+
+
+
+
+
+-
