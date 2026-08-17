@@ -1,0 +1,157 @@
+EspoCRM QA Automation Project
+Accounts Module – Test Execution Summary
+
+1. Document Information
+
+Project: EspoCRM QA Automation
+Module: Accounts
+Document: Test Execution Summary
+Version: 1.0
+Test Environment: Local Docker Environment
+Application URL: http://localhost:8081
+Test Type: Functional Testing
+Execution Status: Completed
+
+
+2. Test Objective
+
+The objective of this test execution was to verify the functional behavior of the EspoCRM Accounts module, including account creation, validation, viewing, editing, deletion, duplicate detection, search, filtering, followers, locking/unlocking, phone number handling, User Access and Audit Log functionality.
+
+
+3. Test Execution Summary
+
+Total Test Cases: 36
+Executed: 36
+Passed: 36
+Failed: 0
+Blocked: 0
+Not Executed: 0
+Pass Percentage: 100%
+
+
+4. Functional Areas Tested
+
+- Accounts module accessibility
+- Accounts list
+- Empty-state behavior
+- Create Account
+- Mandatory Account Name validation
+- Optional fields
+- Save functionality
+- Cancel functionality
+- View Account details
+- Edit Account
+- Data persistence after editing
+- Delete Account
+- Delete confirmation
+- Search
+- Duplicate detection
+- Duplicate Account creation after modifying data
+- Personal Data
+- Followers
+- Followed filter
+- Unfollow
+- User Access
+- Account Lock
+- Account Unlock
+- Phone number with country code
+- Phone number without country code
+- All filter
+- Recently Created filter
+- Starred filter
+- Only My filter
+- Audit Log
+
+
+5. Test Result
+
+All 36 executed test cases passed successfully.
+
+Overall Pass Percentage: 100%
+
+
+6. Key QA Observations
+
+6.1 Account Name is the only mandatory field identified during testing.
+
+6.2 Other Account fields tested were optional.
+
+6.3 Phone numbers can be saved both with and without selecting a country code.
+
+6.4 Duplicate detection displays the message:
+"The record you are creating might already exist"
+
+6.5 A duplicated Account can be saved successfully after changing Account data.
+
+6.6 Locked Accounts cannot be edited.
+
+6.7 Locked Accounts can be unlocked, after which editing becomes available again.
+
+6.8 User Access displays Read, Edit, Delete and Stream access levels. No permission controls were available from the User Access screen during testing.
+
+6.9 The Followers functionality successfully supports adding and removing users as followers.
+
+6.10 Followed Accounts are correctly displayed through the Followed filter.
+
+6.11 Starred Accounts are correctly displayed through the Starred filter.
+
+6.12 Only My correctly displayed Accounts assigned to the current Admin user.
+
+6.13 The Personal Data section displayed Email as the available personal data during testing.
+
+
+7. Audit Log Observation
+
+The Audit Log was available and recorded the Account Lock activity.
+
+The Description update was not displayed because auditing was disabled for the Description field.
+
+The Unlock activity was not observed in the Audit Log and requires further investigation before being classified as a defect.
+
+
+8. Defect / Investigation Summary
+
+Confirmed Failed Test Cases: 0
+
+Confirmed Defects: 0
+
+Investigation Item:
+
+Audit Log – Unlock activity was not displayed while Lock activity was recorded.
+
+The Unlock behavior should be verified against the expected EspoCRM audit behavior before raising a confirmed defect.
+
+
+9. Traceability
+
+All 36 executed test cases are mapped to Requirement IDs and Scenario IDs in the Accounts RTM.
+
+Test Case Traceability: 100%
+
+
+10. Test Environment
+
+Application: EspoCRM
+Version: 10.0.4
+Deployment: Docker
+Database: MariaDB
+Operating Environment: Windows
+Application URL: http://localhost:8081
+
+
+11. Overall QA Conclusion
+
+The EspoCRM Accounts module successfully passed all 36 executed functional test cases.
+
+No confirmed functional defects were identified during this test execution.
+
+The Accounts module is considered functionally stable based on the executed test scope.
+
+The Audit Log Unlock observation remains under investigation and should be verified before final QA sign-off.
+
+
+12. Recommendation
+
+Proceed with the next phase of testing, including API testing, database validation, Selenium automation and Jenkins integration.
+
+The Audit Log Unlock behavior should also be investigated before final project sign-off.
