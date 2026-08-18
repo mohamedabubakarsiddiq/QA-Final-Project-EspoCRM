@@ -1,0 +1,245 @@
+EspoCRM QA Automation
+Contacts Module – Test Execution Summary
+
+Document: Contacts-Test-Execution-Summary-v1.0
+Execution Date: 18-Aug-2026
+Module: Contacts
+Application: EspoCRM
+Environment: Localhost
+URL: http://localhost:8081/#Contact
+
+1. EXECUTION OBJECTIVE
+
+The objective of this execution was to validate the Contacts module of EspoCRM through functional manual testing, covering Contact creation, validation, relationships, email and phone handling, search and filters, record actions, Personal Data, User Access, and Followers.
+
+2. TEST EXECUTION SUMMARY
+
+Total Test Cases Executed: 44
+Passed: 43
+Failed: 1
+Blocked: 0
+Not Executed: 0
+
+Pass Percentage: 97.73%
+Fail Percentage: 2.27%
+
+Overall Result: PASS WITH ONE OPEN DEFECT
+
+3. TEST COVERAGE
+
+The following Contacts functionality was covered:
+
+- Contacts module access
+- Contacts list and empty state
+- Create Contact
+- Name field validation
+- Account relationship
+- Multiple Account relationships
+- Account Title
+- Email creation and validation
+- Multiple email addresses
+- Email Opt Out
+- Email Invalid status
+- Email Starred functionality
+- Email removal
+- Mobile phone without country code
+- Mobile phone with India (+91) country code
+- Multiple phone numbers
+- Phone types
+- Office phone validation
+- View Contact
+- Edit Contact
+- Data persistence
+- Delete confirmation
+- Contact deletion
+- Deleted Contact search
+- Duplicate Contact
+- Personal Data
+- Personal Data selection and erasure
+- User Access
+- Contact search
+- Contacts list field selection
+- All filter
+- Starred filter
+- Portal Users filter
+- Only My filter
+- Followed filter
+- Add follower
+- Remove follower
+
+4. FAILED TEST CASE
+
+Test Case ID: TC-CON-016
+Requirement ID: FR-CON-011
+Scenario ID: TS-CON-016
+Title: Verify one Email can be marked as Starred
+Severity: Medium
+Priority: Medium
+Status: Fail
+
+Expected Result:
+The selected email should remain marked/highlighted as Starred after saving and reopening the Contact.
+
+Actual Result:
+The email details were saved successfully, but the selected email was not highlighted or otherwise indicated as Starred after reopening the Contact.
+
+Defect ID:
+BUG-CON-001
+
+Defect Title:
+Starred Email selection is not displayed after reopening Contact.
+
+Defect Status:
+Open
+
+5. IMPORTANT EXECUTION OBSERVATIONS
+
+5.1 Name Fields
+
+Execution corrected the initial reconnaissance assumption regarding mandatory Name fields.
+
+- Prefix is optional.
+- First Name is optional.
+- Last Name is mandatory.
+
+When Last Name was left blank, the system displayed:
+- "Not valid"
+- "Last Name is required"
+
+The Contact was prevented from being saved.
+
+5.2 Email Validation
+
+Valid email addresses were saved and displayed correctly.
+
+Invalid email input was rejected with:
+- "Not valid"
+- "Email should be a valid email"
+
+5.3 Email Controls
+
+- Opt Out selection was retained and the opted-out email was displayed with strikethrough.
+- Invalid status was retained and the email was displayed with strikethrough.
+- Email removal worked successfully.
+- Starred selection could be made, but the selected Starred state was not visibly retained after reopening. This resulted in BUG-CON-001.
+
+5.4 Phone Validation
+
+Mobile phone numbers were successfully saved both with and without a country code.
+
+India (+91) country code was successfully supported.
+
+Multiple phone numbers of different types were saved successfully.
+
+An invalid/non-10-digit Office number was rejected with:
+- "Not valid"
+- "Phone is too long"
+
+5.5 Account Relationship
+
+Contacts could be associated with existing Accounts.
+
+Multiple Accounts could be selected.
+
+After selecting an Account, the additional Title field became available.
+
+5.6 Personal Data
+
+Personal Data displayed:
+- Email
+- Name
+- Phone
+
+Individual fields and Select All could be selected.
+
+Erasure displayed:
+"Checked fields will be erased permanently. Are you sure?"
+
+After erasure:
+- "Done" was displayed.
+- The erased email displayed an ERASED identifier after reopening.
+
+5.7 User Access
+
+User Access displayed Admin with:
+- Read — Selected
+- Edit — Selected
+- Delete — Selected
+- Stream — Selected
+
+Permissions could not be changed from the User Access page.
+
+5.8 Search and Filters
+
+Existing Contacts were searchable successfully.
+
+A non-existing Contact search returned:
+"No data"
+
+The following filters were verified:
+- All
+- Starred
+- Portal Users
+- Only My
+- Followed
+
+The Portal Users filter returned no data because no Portal User data was available in the test environment.
+
+Only My correctly displayed a Contact assigned to Admin.
+
+Followed correctly displayed a followed Contact.
+
+5.9 Followers
+
+Admin could be added as a Contact follower.
+
+The Contact appeared under the Followed filter.
+
+Admin could be removed as a follower.
+
+The Contact disappeared from the Followed filter after removal.
+
+6. DEFECT SUMMARY
+
+Total Defects Identified: 1
+
+BUG-CON-001
+Starred Email selection is not displayed after reopening Contact.
+
+Severity: Medium
+Priority: Medium
+Status: Open
+Linked Test Case: TC-CON-016
+
+7. REQUIREMENT TRACEABILITY
+
+Contacts requirements were mapped through the RTM to the executed test cases.
+
+Corrected requirements include:
+- FR-CON-004A — Prefix behavior / Prefix is optional
+- FR-CON-004B — First Name behavior / First Name is optional
+- FR-CON-004 — Last Name mandatory
+
+The corrected mapping prevents Prefix and First Name behavior from being incorrectly traced to the Last Name mandatory requirement.
+
+8. FINAL ASSESSMENT
+
+The Contacts module achieved a 97.73% pass rate with 43 of 44 test cases passing.
+
+The module is functionally stable across the major areas tested. One medium-severity defect remains open regarding the visible persistence of the Starred Email state after reopening a Contact.
+
+Recommended next action:
+Retest BUG-CON-001 after the issue is fixed or configuration is changed, and verify that the selected Starred email remains visibly indicated after saving and reopening the Contact.
+
+9. DOCUMENTATION STATUS
+
+Contacts module documentation completed/planned:
+
+- Functional Requirements — v1.1
+- Detailed Test Cases — v1.1
+- Bug Report — v1.0
+- RTM — v1.0
+- Test Execution Summary — v1.0
+
+Next project activity:
+Commit the completed Contacts QA documentation to Git and then proceed to the next planned module.

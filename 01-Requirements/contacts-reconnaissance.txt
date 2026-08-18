@@ -1,0 +1,54 @@
+EspoCRM QA Automation
+Contacts Module – Initial Reconnaissance
+
+Date: 18-Aug-2026
+
+1. Module Accessibility
+- Contacts module accessible: Yes
+- URL: http://localhost:8081/#Contact
+
+2. List Page
+- Contact list: No Data
+- Create button: Yes
+- Search: Yes
+- Filters: Yes
+- Other actions: there is field drop down list has the following which are all selectable: Account, Email, Phone, Assigned User. Page 0/0 is visible. Pagination available
+
+3. Create Contact
+- Fields observed:
+Name section has three text box
+	* prefix box: Mr. Mrs. Ms. Dr.
+Accounts: Selectable from the list of accounts available in the system. Once we select any existing account from the list additional text box added next to it as TITLE, and we can add multiple accounts from list one by one.
+Email: Has empty text box to enter email address, Opt out button, Invalid button. Once we add email then adding multiple email option enables '+'
+Phone: has multiple options to select like Mobile, Office, fax, other. also has the country code to be selectable. once we add an phone number then adding multiple phone number option enable '+'
+Address: Has street text box, City text box, State text box, Postal Code box, Country text box, Description.
+Assigned user
+Teams 
+
+- Save: Yes available
+- Cancel: Yes available
+
+4. Mandatory Fields
+- Field(s): Name is mandatory field
+
+5. Validation
+- Invalid data validation: no validation displayed
+- Error messages: No error message displayed
+
+6. Record Actions
+- View: yes
+- Edit: yes
+- Delete: yes
+- Delete confirmation: yes
+- Duplicate: Yes only after making changes in new contact we can save duplicate
+- Lock: not available
+- Unlock: not available
+- Followers: Yes view followers available
+- Audit Log: Not available
+- User Access: yes view user access available
+- Personal Data: yes view personal data available
+
+7. Initial QA Observations
+
+
+8. Questions / Items Requiring Further Testing

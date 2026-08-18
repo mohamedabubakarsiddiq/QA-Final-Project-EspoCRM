@@ -1,0 +1,125 @@
+EspoCRM QA Automation
+Contacts Module – Functional Requirements
+
+Date: 18-Aug-2026
+Version: v1.1
+Execution status updated after Contacts test execution.
+
+FR-CON-001 — Contacts module access
+The authorized user should be able to access the Contacts module.
+
+FR-CON-002 — Contacts list
+The Contacts module should display the Contacts list and support the available list controls.
+
+FR-CON-003 — Create Contact
+The user should be able to open the Create Contact form.
+
+FR-CON-004 — Last Name mandatory
+Last Name is mandatory for Contact creation. The system should prevent Contact creation when Last Name is blank and display an appropriate validation message.
+Execution evidence: When Last Name was blank, the system displayed “Not valid” and “Last Name is required” and prevented saving.
+
+FR-CON-005 — Contact creation
+The user should be able to create a Contact successfully when the mandatory Last Name field contains a valid value.
+Execution evidence: Contact creation was successful with valid Last Name. Prefix and First Name were also tested as blank and the Contact was still saved.
+
+FR-CON-006 — Account relationship
+The user should be able to associate one or more existing Accounts with a Contact.
+
+FR-CON-007 — Account Title
+A Title field should be available for an associated Account and the user should be able to enter and save the relevant value.
+
+FR-CON-008 — Email
+The user should be able to add an email address to a Contact.
+
+FR-CON-009 — Email validation
+The system should prevent saving an invalid email address and display an appropriate validation message.
+Execution evidence: Invalid email displayed “Not valid” and “Email should be a valid email”, and the Contact was not saved.
+
+FR-CON-010 — Multiple email addresses
+The user should be able to add multiple email addresses to a Contact and retain them after saving.
+
+FR-CON-011 — Email controls
+The user should be able to use the Opt Out, Invalid, Starred and Remove controls for Contact email addresses.
+Execution evidence: Opt Out and Invalid statuses were retained; Remove successfully removed an email. Starred selection did not remain highlighted/indicated after saving and reopening.
+
+FR-CON-012 — Phone
+The user should be able to add phone numbers to a Contact using the available phone types and optional country code.
+Execution evidence: Mobile phone was saved successfully both without a country code and with India (+91).
+
+FR-CON-013 — Multiple phone numbers
+The user should be able to add multiple phone numbers of different types to a Contact.
+Execution evidence: Mobile and Office numbers were saved and displayed successfully.
+
+FR-CON-014 — Phone number validation
+The system should validate phone number input according to the selected phone type.
+Execution evidence: An 11-digit Office number displayed “Not valid” and “Phone is too long” and was prevented from being saved.
+
+FR-CON-015 — View Contact
+The user should be able to open an existing Contact and view its saved information.
+Execution evidence: Name, Account, Email, Phone, Address and Assigned User were displayed.
+
+FR-CON-016 — Edit Contact
+The user should be able to edit Contact information and save the changes.
+
+FR-CON-017 — Contact data persistence
+Updated Contact information should remain available after saving and reopening the Contact.
+Execution evidence: Updated Description remained displayed after reopening.
+
+FR-CON-018 — Delete Contact
+The user should receive a deletion confirmation and be able to delete a Contact.
+Execution evidence: “Are you sure you want to remove the record?” with Remove/Cancel was displayed and the Contact was removed successfully.
+
+FR-CON-019 — Deleted Contact search
+A deleted Contact should not be returned in the Contacts search results.
+Execution evidence: Searching for the deleted Contact displayed “No data”.
+
+FR-CON-020 — Duplicate Contact
+The Duplicate action should be available and the system should display a duplicate-record warning when the duplicated Contact is saved.
+Execution evidence: “The record you are creating might already exist” was displayed with Create/Cancel. The duplicate Contact could still be saved by selecting Create.
+
+FR-CON-021 — Personal Data
+The Personal Data option should display available personal data such as Email, Name and Phone and support individual or all-data selection for erasure.
+Execution evidence: Email, Name and Phone were available; individual selection and Select All were available. Erasure confirmation was displayed, followed by “Done”, and the erased email showed an ERASED identifier after reopening.
+
+FR-CON-022 — User Access
+The User Access view should display available access levels such as Read, Edit, Delete and Stream.
+Execution evidence: Admin was displayed with Read, Edit, Delete and Stream selected. Permissions could not be changed from this page.
+
+FR-CON-023 — Contact search
+The user should be able to search for an existing Contact and receive no matching data for a non-existing Contact.
+Execution evidence: Existing Contact search returned the correct Contact; XYZ-NONEXISTENT-999 returned “No data”.
+
+FR-CON-024 — List field selection
+The Contacts list should allow available fields such as Account, Email, Phone and Assigned User to be selected for display/search/filtering.
+Execution evidence: Account, Email, Phone and Assigned User were selectable and corresponding columns were displayed.
+
+FR-CON-025 — All filter
+The All filter should display available Contact records.
+Execution evidence: Available Contacts were displayed.
+
+FR-CON-026 — Starred filter
+The Starred filter should display Contacts that have been starred.
+Execution evidence: A starred Contact appeared successfully under the Starred filter.
+
+FR-CON-027 — Portal Users filter
+The Portal Users filter should return applicable Portal User Contacts when such data exists; otherwise it should return an empty result without errors.
+Execution evidence: No data was displayed and no error occurred because no Portal User data was available.
+
+FR-CON-028 — Only My filter
+The Only My filter should display Contacts assigned to the current user.
+Execution evidence: A Contact assigned to Admin appeared under Only My.
+
+FR-CON-029 — Followed filter
+The Followed filter should display Contacts followed by the current user.
+Execution evidence: A followed Contact appeared under Followed.
+
+FR-CON-030 — Followers
+The user should be able to add and remove a user as a Contact follower, and the Followed filter should reflect the change.
+Execution evidence: Admin was successfully added as a follower; the Contact appeared under Followed. After Admin was removed, the Contact disappeared from Followed.
+
+Notes:
+- Prefix and First Name were initially recorded as mandatory during reconnaissance, but execution showed that a Contact could be saved with Prefix blank and with First Name blank. They are therefore not currently documented as mandatory requirements.
+- Last Name was confirmed as mandatory during execution.
+- Lock/Unlock and Audit Log were not available for Contacts during reconnaissance and are not included as Contacts requirements/test cases.
+- Teams was available but no Team data was present during reconnaissance.
+- Confirmed execution finding: Starred email selection did not remain highlighted/indicated after saving and reopening. This should be documented in the Contacts bug report.
