@@ -1,0 +1,443 @@
+ESPOCRM QA AUTOMATION PROJECT
+LEADS MODULE - FUNCTIONAL REQUIREMENTS
+Version: v1.1
+
+============================================================
+DOCUMENT PURPOSE
+============================================================
+
+This document defines the functional requirements identified
+for the EspoCRM Leads module and records clarifications confirmed
+during manual test execution.
+
+Application : EspoCRM
+Module      : Leads
+URL         : http://localhost:8081/#Lead
+
+============================================================
+FUNCTIONAL REQUIREMENTS
+============================================================
+
+FR-LEAD-001 — Leads Module Access
+The user should be able to access the Leads module.
+
+FR-LEAD-002 — Leads List
+The Leads module should display the Leads list page with the
+available Create, Search, Filter and pagination controls.
+
+FR-LEAD-003 — Leads Empty State
+When no Lead records are available, the Leads list should display
+an appropriate No Data/empty state without an error.
+
+FR-LEAD-004 — Create Lead
+The user should be able to open the Create Lead form.
+
+FR-LEAD-005 — Lead Name
+The Create Lead form should provide Prefix, First Name and Last
+Name fields.
+
+FR-LEAD-006 — Name Validation
+The system should validate the required Name information and prevent
+saving when the required information is missing.
+
+FR-LEAD-007 — Lead Creation
+The user should be able to create and save a Lead using valid
+mandatory information.
+
+FR-LEAD-008 — Account Name
+The Lead should provide an Account Name field that accepts Account
+information.
+
+FR-LEAD-009 — Email
+The Lead should provide an Email field that accepts a valid email
+address and retains the saved value.
+
+FR-LEAD-010 — Email Opt Out
+The user should be able to mark an Email as Opt Out and the status
+should be retained.
+
+FR-LEAD-011 — Email Invalid
+The user should be able to mark an Email as Invalid and the status
+should be retained.
+
+FR-LEAD-012 — Email Validation
+Invalid email values should be rejected with an appropriate
+validation message.
+
+FR-LEAD-013 — Phone
+The Lead should provide a Phone field that accepts a valid phone
+number.
+
+FR-LEAD-014 — Phone Types
+The Phone field should support Mobile, Office, Fax, Home and Other.
+
+FR-LEAD-015 — Phone Country Code
+The Phone field should support country-code selection.
+
+FR-LEAD-016 — Phone Opt Out
+The user should be able to mark a Phone number as Opt Out.
+
+FR-LEAD-017 — Phone Invalid
+The user should be able to mark a Phone number as Invalid.
+
+FR-LEAD-018 — Title
+The Lead should provide a Title field.
+
+FR-LEAD-019 — Website
+The Lead should provide a Website field.
+
+FR-LEAD-020 — Address
+The Lead should provide Street, City, State, Postal Code and Country
+address fields.
+
+FR-LEAD-021 — Lead Status
+The Lead Status should provide:
+New, Assigned, In Process, Converted, Recycled and Dead.
+
+FR-LEAD-022 — Lead Source
+The Lead Source should provide:
+Call, Email, Existing Customer, Partner, Public Relations,
+Web Site, Campaign and Other.
+
+FR-LEAD-023 — Opportunity Amount
+The Lead should provide an Opportunity Amount field with USD
+displayed as the currency.
+
+FR-LEAD-024 — Industry
+The Lead should provide an Industry selection field.
+
+FR-LEAD-025 — Description
+The Lead should provide a Description field.
+
+FR-LEAD-026 — Assigned User
+The Lead should provide an Assigned User selection.
+
+FR-LEAD-027 — Teams
+The Lead should provide a Teams selection interface.
+
+FR-LEAD-028 — Campaign
+The Lead should provide a Campaign selection interface.
+
+FR-LEAD-029 — Campaign Selection Page
+The Campaign selection page should provide Search, filters,
+Add Field and Create controls.
+
+FR-LEAD-030 — Campaign Search and Filtering
+Campaign selection should support the available filters:
+All, Active and Only My, together with Search.
+
+FR-LEAD-031 — Campaign List Fields
+The Campaign list should support available fields including:
+Assigned User, Teams, Created At, Created By, Modified At, Type,
+Status and End Date.
+
+FR-LEAD-032 — Create Campaign
+The user should be able to open the Create Campaign form.
+
+FR-LEAD-033 — Campaign Creation Form
+The Create Campaign form should provide Name, Type, Status,
+End Date, Assigned User, Teams, Save and Cancel controls.
+
+FR-LEAD-034 — Campaign Type
+Campaign Type should provide Email, Newsletter, Informational Email,
+Web, Television, Radio and Mail.
+
+FR-LEAD-035 — Campaign Status
+Campaign Status should provide Planning, Active, Inactive and
+Complete.
+
+FR-LEAD-036 — View Lead
+The user should be able to open an existing Lead and view its
+saved information.
+
+FR-LEAD-037 — Edit Lead
+The user should be able to edit Lead information and save changes.
+
+FR-LEAD-038 — Delete Lead
+The user should receive a confirmation before deleting a Lead and
+should be able to cancel or confirm deletion.
+
+FR-LEAD-039 — Duplicate Lead
+The Duplicate action should open a Lead creation form based on the
+existing Lead and should display a duplicate-record warning when
+the duplicate is saved.
+
+FR-LEAD-040 — Self Assignment
+The user should be able to self-assign an available Lead.
+
+FR-LEAD-041 — Followers
+The user should be able to follow a Lead and the followed Lead
+should be available through the Followed filter.
+
+FR-LEAD-042 — Audit Log
+The Lead should provide an Audit Log showing applicable updates.
+
+FR-LEAD-043 — User Access
+The Lead User Access view should display available permissions such
+as Read, Edit, Delete and Stream.
+
+FR-LEAD-044 — Personal Data
+The Personal Data view should provide selectable personal data
+including Email, Name, Address and Phone and support erasure.
+
+FR-LEAD-045 — Lead Search
+The user should be able to search for an existing Lead.
+
+FR-LEAD-046 — Non-existing Lead Search
+A search for a non-existing Lead should return an empty/No Data result
+without an error.
+
+FR-LEAD-047 — All Filter
+The All filter should display applicable Lead records.
+
+FR-LEAD-048 — Open Filter
+The Open filter should display applicable open Leads.
+
+FR-LEAD-049 — Converted Filter
+The Converted filter should display applicable converted Leads when
+converted Lead records are available.
+
+FR-LEAD-050 — Only My Filter
+The Only My filter should display Leads assigned to the current user.
+
+FR-LEAD-051 — Followed Filter
+The Followed filter should display Leads followed by the current user.
+
+FR-LEAD-052 — Lead Conversion
+The user should be able to initiate Lead conversion.
+
+FR-LEAD-053 — Conversion Targets
+Lead conversion should provide Account, Contact and Opportunity
+target fields.
+
+FR-LEAD-054 — Lead Conversion Completion
+The user should be able to complete Lead conversion successfully.
+
+FR-LEAD-055 — Cancel Lead Conversion
+The user should be able to cancel Lead conversion without completing
+the conversion.
+
+FR-LEAD-056 — Target List
+The Lead should provide Target List functionality.
+
+FR-LEAD-057 — Lead Activities
+The Lead should provide activity shortcuts for Compose Mail,
+Schedule Meeting and Schedule Call.
+
+FR-LEAD-058 — Compose Mail
+Compose Mail should open from the Lead and associate the Lead with
+the email activity.
+
+FR-LEAD-059 — Schedule Meeting
+Schedule Meeting should open from the Lead and associate the Lead
+with the meeting activity.
+
+FR-LEAD-060 — Schedule Call
+Schedule Call should open from the Lead and associate the Lead
+with the call activity.
+
+FR-LEAD-061 — Meetings Page
+Activities > Meetings should provide Search, filters, available
+fields and the Meetings list.
+
+FR-LEAD-062 — Save Lead
+The user should be able to save a valid Lead.
+
+FR-LEAD-063 — Cancel Lead Creation
+The user should be able to cancel Lead creation without saving
+the new Lead.
+
+FR-LEAD-064 — Save & Continue Editing
+The user should be able to save a Lead and remain in editing mode.
+
+FR-LEAD-065 — Save & New
+The user should be able to save the current Lead and open a new
+Create Lead form.
+
+============================================================
+EXECUTION-BASED REQUIREMENT CLARIFICATIONS
+============================================================
+
+1. NAME MANDATORY BEHAVIOR
+------------------------------------------------------------
+Execution confirmed that submitting the Create Lead form without
+the required Name information displayed "Not valid" and highlighted
+the Name fields.
+
+Prefix was not required for successful Lead creation.
+
+Therefore:
+- Prefix is currently treated as optional.
+- The requirement does not identify Prefix as mandatory.
+- The exact mandatory Name component should be based on the
+  application's validation behavior rather than assuming Prefix
+  is required.
+
+2. ACCOUNT NAME BEHAVIOR
+------------------------------------------------------------
+Execution confirmed that Account Name is a manual-entry field in
+the Lead form.
+
+The Account Name field did not open a separate selection page.
+A manually entered Account Name was successfully saved.
+
+Therefore FR-LEAD-008 is clarified as:
+"The Account Name field should accept manually entered Account
+information and retain the saved value."
+
+3. EMAIL OPT OUT AND INVALID
+------------------------------------------------------------
+Execution confirmed:
+- Email Opt Out is retained after saving.
+- Email Invalid is retained after saving.
+- Both states are visually represented by a strikethrough on the
+  email address.
+
+4. EMAIL VALIDATION
+------------------------------------------------------------
+Execution confirmed that an invalid email displayed:
+"Not valid"
+and
+"Email should be a valid email"
+
+The invalid email was prevented from being saved.
+
+5. PHONE OPT OUT AND INVALID
+------------------------------------------------------------
+Execution confirmed:
+- Phone Opt Out is retained after saving.
+- Phone Invalid is retained after saving.
+- Both states are visually represented by a strikethrough.
+
+6. CONVERTED STATUS
+------------------------------------------------------------
+Execution confirmed that selecting Lead Status = Converted exposes
+additional conversion fields:
+- Account
+- Contact
+- Opportunity
+
+New, Assigned, In Process, Recycled and Dead did not expose these
+additional conversion fields during execution.
+
+7. CONVERSION TARGETS ARE OPTIONAL IN OBSERVED FLOW
+------------------------------------------------------------
+Execution confirmed that a Lead could be converted without selecting
+Account, Contact or Opportunity.
+
+After conversion without selecting targets, the displayed values
+were:
+Account     : None
+Contact     : None
+Opportunity : None
+
+Therefore FR-LEAD-053 is clarified to state that these fields are
+available conversion targets but were not mandatory in the observed
+conversion flow.
+
+8. TEAMS DATA
+------------------------------------------------------------
+The Teams selection interface was accessible but displayed No Data.
+No Team records were available in the current test environment.
+
+This is treated as a test-data/environment limitation, not a
+functional defect.
+
+9. CAMPAIGN DATA
+------------------------------------------------------------
+Campaign selection, search and filter interfaces were accessible,
+but no Campaign records were available and the list displayed
+No Data.
+
+The Create Campaign form was accessible and Campaign Type and
+Campaign Status options were available.
+
+This is treated as a test-data/environment limitation, not a
+functional defect.
+
+10. TARGET LIST DATA
+------------------------------------------------------------
+Target List functionality was accessible but displayed No Data.
+No Target List records were available.
+
+This is treated as a test-data/environment limitation, not a
+functional defect.
+
+11. CONVERTED FILTER DATA
+------------------------------------------------------------
+The Converted filter displayed No Data because no converted Lead
+records were available for that filter execution.
+
+This is treated as a test-data limitation, not a functional defect.
+
+12. DUPLICATE LEAD BEHAVIOR
+------------------------------------------------------------
+Execution confirmed:
+- Duplicate opens a new Create Lead form.
+- Saving displays:
+  "The record you are creating might already exist"
+- Options are Create and Cancel.
+- Create generates the duplicate.
+- Cancel prevents duplicate creation.
+- Cancelling the creation form terminates the duplication flow.
+
+13. FOLLOWERS
+------------------------------------------------------------
+Execution confirmed that clicking Follow automatically assigned
+Admin as the follower in the current environment.
+
+The followed Lead was displayed successfully under the Followed filter.
+
+14. PERSONAL DATA
+------------------------------------------------------------
+Execution confirmed that Email, Name, Address and Phone can be
+selected for personal-data erasure.
+
+15. ACTIVITY ASSOCIATION
+------------------------------------------------------------
+Execution confirmed:
+- Compose Email automatically associated the Lead in To and Parent.
+- Schedule Meeting associated the Lead as Parent and attendee.
+- Schedule Call associated the Lead as Parent and attendee.
+
+16. SMTP CONFIGURATION
+------------------------------------------------------------
+Compose Email displayed:
+"SMTP is not configured"
+
+The Compose Email interface itself opened successfully and the Lead
+was correctly associated.
+
+This is classified as an environment/configuration observation,
+not a Leads functional defect.
+
+============================================================
+EXECUTION STATUS
+============================================================
+
+Total Test Cases Executed : 65
+Passed                    : 65
+Failed                    : 0
+Blocked                   : 0
+Pass Rate                 : 100%
+Confirmed Functional Defects : 0
+
+============================================================
+DOCUMENTATION CONCLUSION
+============================================================
+
+The Leads functional requirements have been clarified using actual
+execution evidence.
+
+No requirement was removed because of a functional failure.
+The clarifications primarily document:
+- Actual mandatory Name behavior
+- Manual Account Name entry
+- Email/Phone status behavior
+- Converted status behavior
+- Optional conversion targets in the observed flow
+- Environment/test-data limitations
+- Activity association
+- SMTP configuration dependency
+
+END OF DOCUMENT
