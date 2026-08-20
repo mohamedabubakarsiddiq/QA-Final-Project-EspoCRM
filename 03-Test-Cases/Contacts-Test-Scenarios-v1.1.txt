@@ -1,0 +1,139 @@
+EspoCRM QA Automation
+Contacts Module – Test Scenarios
+Version: v1.1
+
+TS-CON-001 — Verify Contacts module access
+Requirement: FR-CON-001
+Scenario: Verify that an authorized user can access the Contacts module.
+
+TS-CON-002 — Verify Contacts list
+Requirement: FR-CON-002
+Scenario: Verify that the Contacts module displays the Contacts list and available list controls.
+
+TS-CON-003 — Verify Create Contact form
+Requirement: FR-CON-003
+Scenario: Verify that the user can open the Create Contact form.
+
+TS-CON-004 — Verify Last Name mandatory validation
+Requirement: FR-CON-004
+Scenario: Verify that Last Name is mandatory and Contact creation is prevented when Last Name is blank.
+
+TS-CON-004A — Verify Prefix is optional
+Requirement: FR-CON-004A
+Scenario: Verify that Contact creation is allowed when Prefix is blank.
+
+TS-CON-004B — Verify First Name is optional
+Requirement: FR-CON-004B
+Scenario: Verify that Contact creation is allowed when First Name is blank.
+
+TS-CON-005 — Verify Contact creation
+Requirement: FR-CON-005
+Scenario: Verify that a Contact can be created successfully when Last Name contains a valid value.
+
+TS-CON-006 — Verify Account relationship
+Requirement: FR-CON-006
+Scenario: Verify that one or more existing Accounts can be associated with a Contact.
+
+TS-CON-007 — Verify Account Title
+Requirement: FR-CON-007
+Scenario: Verify that the Title field is available for an associated Account and the value can be entered and saved.
+
+TS-CON-008 — Verify Email
+Requirement: FR-CON-008
+Scenario: Verify that an email address can be added to a Contact.
+
+TS-CON-009 — Verify Email validation
+Requirement: FR-CON-009
+Scenario: Verify that an invalid email address is rejected with an appropriate validation message.
+
+TS-CON-010 — Verify multiple email addresses
+Requirement: FR-CON-010
+Scenario: Verify that multiple email addresses can be added and retained after saving.
+
+TS-CON-011 — Verify Contact email controls
+Requirement: FR-CON-011
+Scenario: Verify Opt Out, Invalid, Starred and Remove controls for Contact email addresses.
+
+TS-CON-012 — Verify Phone
+Requirement: FR-CON-012
+Scenario: Verify phone numbers can be added using available phone types with and without a country code.
+
+TS-CON-013 — Verify multiple phone numbers
+Requirement: FR-CON-013
+Scenario: Verify multiple phone numbers of different types can be added and saved.
+
+TS-CON-014 — Verify phone number validation
+Requirement: FR-CON-014
+Scenario: Verify phone number input validation according to the selected phone type.
+
+TS-CON-015 — Verify View Contact
+Requirement: FR-CON-015
+Scenario: Verify an existing Contact can be opened and its saved information viewed.
+
+TS-CON-016 — Verify Edit Contact
+Requirement: FR-CON-016
+Scenario: Verify Contact information can be edited and saved.
+
+TS-CON-017 — Verify Contact data persistence
+Requirement: FR-CON-017
+Scenario: Verify updated Contact information remains available after saving and reopening.
+
+TS-CON-018 — Verify Delete Contact
+Requirement: FR-CON-018
+Scenario: Verify Contact deletion requires confirmation and completes successfully.
+
+TS-CON-019 — Verify deleted Contact search
+Requirement: FR-CON-019
+Scenario: Verify a deleted Contact is not returned in Contacts search results.
+
+TS-CON-020 — Verify Duplicate Contact
+Requirement: FR-CON-020
+Scenario: Verify Duplicate is available and a duplicate-record warning is displayed when saving.
+
+TS-CON-021 — Verify Personal Data
+Requirement: FR-CON-021
+Scenario: Verify Contact personal data can be viewed, selected individually or through Select All, and erased with confirmation.
+
+TS-CON-022 — Verify User Access
+Requirement: FR-CON-022
+Scenario: Verify User Access displays available access levels such as Read, Edit, Delete and Stream.
+
+TS-CON-023 — Verify Contact search
+Requirement: FR-CON-023
+Scenario: Verify an existing Contact can be searched and a non-existing Contact returns no matching data.
+
+TS-CON-024 — Verify list field selection
+Requirement: FR-CON-024
+Scenario: Verify Account, Email, Phone and Assigned User can be selected for display/search/filtering.
+
+TS-CON-025 — Verify All filter
+Requirement: FR-CON-025
+Scenario: Verify the All filter displays available Contact records.
+
+TS-CON-026 — Verify Starred filter
+Requirement: FR-CON-026
+Scenario: Verify the Starred filter displays Contacts that have been starred.
+
+TS-CON-027 — Verify Portal Users filter
+Requirement: FR-CON-027
+Scenario: Verify Portal Users returns applicable Portal User Contacts when data exists and an empty result without errors when no data exists.
+
+TS-CON-028 — Verify Only My filter
+Requirement: FR-CON-028
+Scenario: Verify Only My displays Contacts assigned to the current user.
+
+TS-CON-029 — Verify Followed filter
+Requirement: FR-CON-029
+Scenario: Verify Followed displays Contacts followed by the current user.
+
+TS-CON-030 — Verify Followers
+Requirement: FR-CON-030
+Scenario: Verify a user can be added and removed as a Contact follower and Followed reflects the change.
+
+Execution-based notes:
+- Last Name is mandatory.
+- Prefix is optional.
+- First Name is optional.
+- Starred email selection did not remain highlighted/indicated after saving and reopening; this is a confirmed execution finding to be documented in the Contacts Bug Report.
+- Lock/Unlock and Audit Log were not available for Contacts and remain outside the current scope.
+- Teams was available but no Team data was present.
