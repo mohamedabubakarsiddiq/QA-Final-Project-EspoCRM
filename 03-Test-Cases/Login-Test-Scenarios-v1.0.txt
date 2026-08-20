@@ -1,0 +1,87 @@
+ESPOCRM QA AUTOMATION PROJECT
+LOGIN / AUTHENTICATION - TEST SCENARIOS
+Version: v1.0
+
+============================================================
+1. DOCUMENT INFORMATION
+============================================================
+
+Application        : EspoCRM
+Module             : Login / Authentication
+Environment        : Local EspoCRM
+Source             : Existing Login Detailed Test Cases
+
+============================================================
+2. TEST SCENARIOS
+============================================================
+
+TS-AUTH-001
+Requirement ID: FR-AUTH-001
+Scenario: Verify login page accessibility
+
+
+TS-AUTH-002
+Requirement ID: FR-AUTH-004
+Scenario: Verify login with valid credentials
+
+
+TS-AUTH-003
+Requirement ID: FR-AUTH-005
+Scenario: Verify login with invalid username
+
+
+TS-AUTH-004
+Requirement ID: FR-AUTH-005
+Scenario: Verify login with invalid password
+
+
+TS-AUTH-005
+Requirement ID: FR-AUTH-005
+Scenario: Verify login with invalid username and password
+
+
+TS-AUTH-006
+Requirement ID: FR-AUTH-005
+Scenario: Verify login with blank username
+
+
+TS-AUTH-007
+Requirement ID: FR-AUTH-005
+Scenario: Verify login with blank password
+
+
+TS-AUTH-008
+Requirement ID: FR-AUTH-005
+Scenario: Verify login with both fields blank
+
+
+TS-AUTH-009
+Requirement ID: FR-AUTH-003
+Scenario: Verify password masking
+
+
+TS-AUTH-010
+Requirement ID: FR-AUTH-006
+Scenario: Verify logout functionality
+
+
+============================================================
+3. SCENARIO COVERAGE
+============================================================
+
+Total Test Scenarios: 10
+
+All 10 scenarios are directly derived from the existing
+executed Login Detailed Test Cases.
+
+
+============================================================
+4. TRACEABILITY NOTE
+============================================================
+
+FR-AUTH-002 is not represented in the supplied existing Login
+Detailed Test Cases workbook and has not been inferred.
+
+============================================================
+END OF DOCUMENT
+============================================================

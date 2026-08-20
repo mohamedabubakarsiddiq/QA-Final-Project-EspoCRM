@@ -1,0 +1,109 @@
+ESPOCRM QA AUTOMATION PROJECT
+LOGIN / AUTHENTICATION - FUNCTIONAL REQUIREMENTS
+Version: v1.0
+
+============================================================
+1. DOCUMENT INFORMATION
+============================================================
+
+Application        : EspoCRM
+Module             : Login / Authentication
+Environment        : Local EspoCRM
+Execution Type     : Functional Testing
+Source             : Existing Login Detailed Test Cases
+
+============================================================
+2. SOURCE NOTE
+============================================================
+
+No separate original Login Functional Requirements document was
+found in the project storage.
+
+The requirements below are therefore derived strictly from the
+existing executed Login Detailed Test Cases workbook.
+
+These requirements are a documentation baseline and are not
+claimed to be the original source requirements.
+
+============================================================
+3. FUNCTIONAL REQUIREMENTS
+============================================================
+
+FR-AUTH-001 — Login Page Accessibility
+
+The EspoCRM login page should load successfully and display the
+username field, password field and login control.
+
+Source Test Case:
+TC-AUTH-001
+
+
+FR-AUTH-003 — Password Masking
+
+Password characters should be masked and should not be displayed
+as plain text.
+
+Source Test Case:
+TC-AUTH-009
+
+
+FR-AUTH-004 — Valid Credential Authentication
+
+Valid credentials should authenticate the user successfully and
+redirect the user to the EspoCRM application.
+
+Source Test Case:
+TC-AUTH-002
+
+
+FR-AUTH-005 — Invalid and Blank Credential Validation
+
+Invalid or blank username/password combinations should be rejected
+and an appropriate authentication or validation message should be
+displayed.
+
+Source Test Cases:
+TC-AUTH-003
+TC-AUTH-004
+TC-AUTH-005
+TC-AUTH-006
+TC-AUTH-007
+TC-AUTH-008
+
+
+FR-AUTH-006 — Logout Functionality
+
+Logout functionality should operate successfully.
+
+Source Test Case:
+TC-AUTH-010
+
+
+============================================================
+4. REQUIREMENT COVERAGE
+============================================================
+
+Requirements represented in the existing Login Test Cases:
+
+FR-AUTH-001
+FR-AUTH-003
+FR-AUTH-004
+FR-AUTH-005
+FR-AUTH-006
+
+Total represented requirements: 5
+
+
+============================================================
+5. TRACEABILITY NOTE
+============================================================
+
+FR-AUTH-002 is not represented in the supplied existing Login
+Detailed Test Cases workbook.
+
+No requirement content has been invented or assigned to
+FR-AUTH-002.
+
+============================================================
+END OF DOCUMENT
+============================================================
