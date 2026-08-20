@@ -1,0 +1,155 @@
+ESPOCRM QA AUTOMATION PROJECT
+OPPORTUNITIES MODULE - TEST SCENARIOS
+Version: v1.0
+
+============================================================
+DOCUMENT PURPOSE
+============================================================
+
+This document defines the high-level test scenarios for the
+EspoCRM Opportunities module based on the functional requirements
+identified during exploratory observation.
+
+Application : EspoCRM
+Module      : Opportunities
+
+============================================================
+TEST SCENARIOS
+============================================================
+
+Format:
+Scenario ID | Scenario | Requirement ID
+
+TS-OPP-001 | Verify Opportunities module access | FR-OPP-001
+TS-OPP-002 | Verify Opportunities List view | FR-OPP-002
+TS-OPP-003 | Verify Opportunities empty state | FR-OPP-003
+TS-OPP-004 | Verify Opportunity page counter | FR-OPP-004
+TS-OPP-005 | Verify Opportunities pagination | FR-OPP-005
+TS-OPP-006 | Verify Opportunities Kanban view | FR-OPP-006
+TS-OPP-007 | Verify Kanban stage columns | FR-OPP-007
+TS-OPP-008 | Verify Create Opportunity action | FR-OPP-008
+TS-OPP-009 | Verify Save action on Create Opportunity | FR-OPP-009
+TS-OPP-010 | Verify Cancel action on Create Opportunity | FR-OPP-010
+TS-OPP-011 | Verify Save menu options | FR-OPP-011
+TS-OPP-012 | Verify Opportunity Name field | FR-OPP-012
+TS-OPP-013 | Verify Opportunity Name mandatory validation | FR-OPP-013
+TS-OPP-014 | Verify Account selection | FR-OPP-014
+TS-OPP-015 | Verify Create Account option | FR-OPP-015
+TS-OPP-016 | Verify Opportunity Stage field | FR-OPP-016
+TS-OPP-017 | Verify Prospecting stage | FR-OPP-017
+TS-OPP-018 | Verify Qualification stage | FR-OPP-018
+TS-OPP-019 | Verify Proposal stage | FR-OPP-019
+TS-OPP-020 | Verify Negotiation stage | FR-OPP-020
+TS-OPP-021 | Verify Closed Won stage | FR-OPP-021
+TS-OPP-022 | Verify Closed Lost stage | FR-OPP-022
+TS-OPP-023 | Verify Opportunity Amount field | FR-OPP-023
+TS-OPP-024 | Verify Amount mandatory validation | FR-OPP-024
+TS-OPP-025 | Verify Amount currency | FR-OPP-025
+TS-OPP-026 | Verify Probability field | FR-OPP-026
+TS-OPP-027 | Verify Close Date field | FR-OPP-027
+TS-OPP-028 | Verify Close Date mandatory validation | FR-OPP-028
+TS-OPP-029 | Verify Close Date calendar picker | FR-OPP-029
+TS-OPP-030 | Verify Contact selection | FR-OPP-030
+TS-OPP-031 | Verify Create Contact option | FR-OPP-031
+TS-OPP-032 | Verify Lead Source field | FR-OPP-032
+TS-OPP-033 | Verify Lead Source values | FR-OPP-033
+TS-OPP-034 | Verify Description field | FR-OPP-034
+TS-OPP-035 | Verify Assigned User field | FR-OPP-035
+TS-OPP-036 | Verify Teams field | FR-OPP-036
+TS-OPP-037 | Verify Opportunity creation with valid mandatory data | FR-OPP-037
+TS-OPP-038 | Verify Cancel of unsaved Opportunity | FR-OPP-038
+TS-OPP-039 | Verify Save & Continue Editing | FR-OPP-039
+TS-OPP-040 | Verify Save & New | FR-OPP-040
+TS-OPP-041 | Verify Prospecting Kanban quick-create | FR-OPP-041
+TS-OPP-042 | Verify Qualification Kanban quick-create | FR-OPP-042
+TS-OPP-043 | Verify Proposal Kanban quick-create | FR-OPP-043
+TS-OPP-044 | Verify Negotiation Kanban quick-create | FR-OPP-044
+TS-OPP-045 | Verify Closed Won Kanban quick-create | FR-OPP-045
+TS-OPP-046 | Verify Kanban quick-create opens standard form with selected stage | FR-OPP-046
+TS-OPP-047 | Verify Account control actions | FR-OPP-047
+TS-OPP-048 | Verify Contact control actions | FR-OPP-048
+TS-OPP-049 | Verify Create Opportunity form fields | FR-OPP-049
+TS-OPP-050 | Verify Create Opportunity form actions | FR-OPP-050
+
+============================================================
+SCENARIO COVERAGE
+============================================================
+
+1. Module Access and List
+- Opportunities module access
+- List view
+- Empty/No Data state
+- Page counter
+- Pagination
+- Kanban view
+- Kanban stage columns
+
+2. Create Opportunity
+- Create action
+- Save
+- Cancel
+- Save & Continue Editing
+- Save & New
+
+3. Opportunity Fields
+- Name
+- Account
+- Stage
+- Amount
+- Currency
+- Probability
+- Close Date
+- Contacts
+- Lead Source
+- Description
+- Assigned User
+- Teams
+
+4. Validation
+- Mandatory Name
+- Mandatory Amount
+- Mandatory Close Date
+
+5. Stage Coverage
+- Prospecting
+- Qualification
+- Proposal
+- Negotiation
+- Closed Won
+- Closed Lost
+
+6. Related Record Controls
+- Existing Account selection
+- Create Account
+- Existing Contact selection
+- Create Contact
+
+7. Kanban Quick Creation
+- Prospecting quick-create
+- Qualification quick-create
+- Proposal quick-create
+- Negotiation quick-create
+- Closed Won quick-create
+- Selected stage retained in Create Opportunity form
+
+8. Form Structure
+- Create Opportunity fields
+- Create Opportunity actions
+
+============================================================
+TRACEABILITY
+============================================================
+
+Total Requirements : 50
+Total Test Scenarios: 50
+
+Each test scenario maps directly to the corresponding functional
+requirement ID (FR-OPP-001 through FR-OPP-050).
+
+Detailed test cases will be executed separately. Actual Result and
+execution Status will be recorded only from observed application
+behavior.
+
+============================================================
+END OF DOCUMENT
+============================================================

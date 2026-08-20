@@ -1,0 +1,342 @@
+ESPOCRM QA AUTOMATION PROJECT
+OPPORTUNITIES MODULE - FUNCTIONAL REQUIREMENTS
+Version: v1.0
+
+============================================================
+DOCUMENT PURPOSE
+============================================================
+
+This document records the functional requirements identified
+during exploratory observation of the EspoCRM Opportunities module.
+
+The requirements are based on the observed Opportunities module
+page, Create Opportunity form, dropdown values, List/Kanban views,
+and stage-specific creation controls.
+
+Application : EspoCRM
+Module      : Opportunities
+Environment : Local EspoCRM
+
+============================================================
+1. OPPORTUNITIES MODULE ACCESS AND LIST
+============================================================
+
+FR-OPP-001 — Opportunities Module Access
+The user should be able to access the Opportunities module.
+
+FR-OPP-002 — Opportunities List View
+The Opportunities module should provide a List view for displaying
+Opportunity records.
+
+FR-OPP-003 — Opportunities Empty State
+When no Opportunity records are available, the Opportunities list
+should display an appropriate "No Data" state.
+
+FR-OPP-004 — Opportunity Page Counter
+The Opportunities list should display the current page/record
+counter. During exploratory observation, the empty list displayed
+"0/0".
+
+FR-OPP-005 — Pagination
+The Opportunities List view should provide pagination controls.
+
+FR-OPP-006 — Kanban View
+The Opportunities module should provide a Kanban view.
+
+FR-OPP-007 — Kanban Stage Columns
+The Kanban view should provide stage-based columns for the observed
+Opportunity stages:
+- Prospecting
+- Qualification
+- Proposal
+- Negotiation
+- Closed Won
+
+============================================================
+2. CREATE OPPORTUNITY
+============================================================
+
+FR-OPP-008 — Create Opportunity
+The user should be able to open the Create Opportunity form.
+
+FR-OPP-009 — Save Opportunity
+The Create Opportunity form should provide a Save action.
+
+FR-OPP-010 — Cancel Opportunity Creation
+The Create Opportunity form should provide a Cancel action.
+
+FR-OPP-011 — Additional Save Actions
+The Create Opportunity form should provide:
+- Save & Continue Editing
+- Save & New
+
+These actions are available through the three-dot menu.
+
+============================================================
+3. OPPORTUNITY NAME
+============================================================
+
+FR-OPP-012 — Opportunity Name
+The Create Opportunity form should provide a Name field.
+
+FR-OPP-013 — Mandatory Opportunity Name
+The Opportunity Name field should be mandatory and the system
+should validate the field when the user attempts to save without
+providing the required value.
+
+============================================================
+4. ACCOUNT
+============================================================
+
+FR-OPP-014 — Account Selection
+The Opportunity should provide an Account field allowing an
+existing Account to be selected.
+
+FR-OPP-015 — Create Account
+The Account control should provide an option to create a new
+Account.
+
+============================================================
+5. OPPORTUNITY STAGE
+============================================================
+
+FR-OPP-016 — Opportunity Stage
+The Create Opportunity form should provide a Stage field.
+
+FR-OPP-017 — Prospecting Stage
+Prospecting should be available as an Opportunity Stage.
+
+FR-OPP-018 — Qualification Stage
+Qualification should be available as an Opportunity Stage.
+
+FR-OPP-019 — Proposal Stage
+Proposal should be available as an Opportunity Stage.
+
+FR-OPP-020 — Negotiation Stage
+Negotiation should be available as an Opportunity Stage.
+
+FR-OPP-021 — Closed Won Stage
+Closed Won should be available as an Opportunity Stage.
+
+FR-OPP-022 — Closed Lost Stage
+Closed Lost should be available as an Opportunity Stage.
+
+============================================================
+6. AMOUNT AND PROBABILITY
+============================================================
+
+FR-OPP-023 — Opportunity Amount
+The Create Opportunity form should provide an Amount field.
+
+FR-OPP-024 — Mandatory Amount
+The Amount field should be mandatory and should be validated when
+the user attempts to save without providing the required value.
+
+FR-OPP-025 — Amount Currency
+The Amount field should display USD as the currency.
+
+FR-OPP-026 — Probability
+The Create Opportunity form should provide a Probability percentage
+field.
+
+============================================================
+7. CLOSE DATE
+============================================================
+
+FR-OPP-027 — Close Date
+The Create Opportunity form should provide a Close Date field.
+
+FR-OPP-028 — Mandatory Close Date
+The Close Date field should be mandatory and should be validated
+when the user attempts to save without providing the required value.
+
+FR-OPP-029 — Close Date Calendar
+The Close Date field should provide a calendar picker for selecting
+a date.
+
+============================================================
+8. CONTACTS
+============================================================
+
+FR-OPP-030 — Contact Selection
+The Opportunity should provide a Contacts field allowing an
+existing Contact to be selected.
+
+FR-OPP-031 — Create Contact
+The Contacts control should provide an option to create a new
+Contact.
+
+============================================================
+9. LEAD SOURCE
+============================================================
+
+FR-OPP-032 — Lead Source
+The Create Opportunity form should provide a Lead Source field.
+
+FR-OPP-033 — Lead Source Values
+The Lead Source dropdown should provide the observed values:
+- Call
+- Email
+- Existing Customer
+- Partner
+- Public Relation
+- Website
+- Campaign
+- Other
+
+============================================================
+10. DESCRIPTION
+============================================================
+
+FR-OPP-034 — Description
+The Create Opportunity form should provide a Description field.
+
+============================================================
+11. ASSIGNED USER AND TEAMS
+============================================================
+
+FR-OPP-035 — Assigned User
+The Create Opportunity form should provide an Assigned User field.
+
+During exploratory observation, Admin was the available user in the
+current environment.
+
+FR-OPP-036 — Teams
+The Create Opportunity form should provide a Teams selection field.
+
+During exploratory observation, the Teams selection contained
+No Data in the current environment.
+
+============================================================
+12. OPPORTUNITY CREATION
+============================================================
+
+FR-OPP-037 — Create Opportunity with Valid Data
+The user should be able to create an Opportunity by providing valid
+mandatory information and saving the record.
+
+FR-OPP-038 — Cancel Unsaved Opportunity
+The user should be able to cancel Opportunity creation without
+saving the new record.
+
+FR-OPP-039 — Save & Continue Editing
+The user should be able to save an Opportunity and remain on the
+editing form.
+
+FR-OPP-040 — Save & New
+The user should be able to save an Opportunity and open a new
+Create Opportunity form.
+
+============================================================
+13. KANBAN STAGE CREATION SHORTCUTS
+============================================================
+
+FR-OPP-041 — Prospecting Quick Create
+The + control associated with Prospecting in Kanban should open
+Create Opportunity with Prospecting preselected.
+
+FR-OPP-042 — Qualification Quick Create
+The + control associated with Qualification in Kanban should open
+Create Opportunity with Qualification preselected.
+
+FR-OPP-043 — Proposal Quick Create
+The + control associated with Proposal in Kanban should open
+Create Opportunity with Proposal preselected.
+
+FR-OPP-044 — Negotiation Quick Create
+The + control associated with Negotiation in Kanban should open
+Create Opportunity with Negotiation preselected.
+
+FR-OPP-045 — Closed Won Quick Create
+The + control associated with Closed Won in Kanban should open
+Create Opportunity with Closed Won preselected.
+
+FR-OPP-046 — Kanban Quick Create Form
+The Kanban stage quick-create action should open the standard
+Create Opportunity form with the selected stage pre-populated.
+
+============================================================
+14. ACCOUNT AND CONTACT CONTROLS
+============================================================
+
+FR-OPP-047 — Account Control Actions
+The Account control should support both selecting an existing
+Account and creating a new Account.
+
+FR-OPP-048 — Contact Control Actions
+The Contacts control should support both selecting an existing
+Contact and creating a new Contact.
+
+============================================================
+15. CREATE OPPORTUNITY FORM LAYOUT
+============================================================
+
+FR-OPP-049 — Opportunity Form Fields
+The Create Opportunity form should provide the observed fields:
+- Name
+- Account
+- Stage
+- Amount
+- Probability
+- Close Date
+- Contacts
+- Lead Source
+- Description
+- Assigned User
+- Teams
+
+FR-OPP-050 — Opportunity Form Actions
+The Create Opportunity form should provide:
+- Save
+- Cancel
+- Save & Continue Editing
+- Save & New
+
+============================================================
+EXPLORATORY OBSERVATIONS / DATA LIMITATIONS
+============================================================
+
+1. The Opportunities List displayed No Data during exploratory
+   observation.
+
+2. The Opportunities page displayed 0/0 while no records existed.
+
+3. Teams selection displayed No Data in the current environment.
+
+4. The observed Kanban view contained stage columns for:
+   Prospecting, Qualification, Proposal, Negotiation and Closed Won.
+
+5. Closed Lost was observed as a selectable Opportunity Stage in
+   the Create Opportunity form, although a Closed Lost Kanban column
+   was not observed in the documented Kanban view.
+
+6. Account and Contact controls provided options to select existing
+   records or create new records.
+
+7. The Amount field was observed as mandatory and displayed USD.
+
+8. Name and Close Date were observed as mandatory fields.
+
+9. The actual validation messages and save behavior for mandatory
+   fields must be confirmed during formal test execution.
+
+10. The requirements in this v1.0 document are based on exploratory
+    observation. Execution findings may require clarification in a
+    later version (v1.1).
+
+============================================================
+TRACEABILITY
+============================================================
+
+The requirements in this document form the baseline for the
+Opportunities detailed test cases.
+
+Requirement IDs:
+FR-OPP-001 through FR-OPP-050
+
+The corresponding test cases will be executed separately and the
+Actual Result / Status will be recorded only from observed behavior.
+
+============================================================
+END OF DOCUMENT
+============================================================

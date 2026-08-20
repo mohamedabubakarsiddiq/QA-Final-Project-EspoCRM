@@ -1,0 +1,309 @@
+ESPOCRM QA AUTOMATION PROJECT
+OPPORTUNITIES MODULE - TEST EXECUTION SUMMARY
+Version: v1.0
+
+============================================================
+1. DOCUMENT INFORMATION
+============================================================
+
+Application        : EspoCRM
+Module             : Opportunities
+Environment        : Local EspoCRM
+URL                : http://localhost:8081/#Opportunity
+Execution Type     : Functional Testing
+Execution Status   : Completed
+
+============================================================
+2. EXECUTION SUMMARY
+============================================================
+
+Total Test Cases   : 50
+Passed             : 50
+Failed             : 0
+Blocked            : 0
+Not Executed       : 0
+Pass Rate          : 100%
+Overall Result     : PASS
+Confirmed Defects  : 0
+
+============================================================
+3. TEST COVERAGE
+============================================================
+
+The Opportunities module execution covered:
+
+- Opportunities module access
+- List View
+- No Data state
+- Page counter
+- Pagination controls
+- Kanban View
+- Kanban stage columns
+- Create Opportunity
+- Save
+- Cancel
+- Save & Continue Editing
+- Save & New
+- Opportunity Name
+- Name mandatory validation
+- Account selection
+- Create Account
+- Opportunity Stage
+- Prospecting
+- Qualification
+- Proposal
+- Negotiation
+- Closed Won
+- Closed Lost
+- Amount
+- Amount mandatory validation
+- USD currency
+- Probability
+- Close Date
+- Close Date mandatory validation
+- Close Date calendar
+- Contact selection
+- Create Contact
+- Lead Source
+- Lead Source values
+- Description
+- Assigned User
+- Teams
+- Opportunity creation with valid data
+- Cancel unsaved Opportunity
+- Kanban quick-create
+- Account control actions
+- Contact control actions
+- Create Opportunity form fields
+- Create Opportunity form actions
+
+============================================================
+4. EXECUTION RESULTS
+============================================================
+
+TC-OPP-001  : PASS
+TC-OPP-002  : PASS
+TC-OPP-003  : PASS
+TC-OPP-004  : PASS
+TC-OPP-005  : PASS
+TC-OPP-006  : PASS
+TC-OPP-007  : PASS
+TC-OPP-008  : PASS
+TC-OPP-009  : PASS
+TC-OPP-010  : PASS
+TC-OPP-011  : PASS
+TC-OPP-012  : PASS
+TC-OPP-013  : PASS
+TC-OPP-014  : PASS
+TC-OPP-015  : PASS
+TC-OPP-016  : PASS
+TC-OPP-017  : PASS
+TC-OPP-018  : PASS
+TC-OPP-019  : PASS
+TC-OPP-020  : PASS
+TC-OPP-021  : PASS
+TC-OPP-022  : PASS
+TC-OPP-023  : PASS
+TC-OPP-024  : PASS
+TC-OPP-025  : PASS
+TC-OPP-026  : PASS
+TC-OPP-027  : PASS
+TC-OPP-028  : PASS
+TC-OPP-029  : PASS
+TC-OPP-030  : PASS
+TC-OPP-031  : PASS
+TC-OPP-032  : PASS
+TC-OPP-033  : PASS
+TC-OPP-034  : PASS
+TC-OPP-035  : PASS
+TC-OPP-036  : PASS
+TC-OPP-037  : PASS
+TC-OPP-038  : PASS
+TC-OPP-039  : PASS
+TC-OPP-040  : PASS
+TC-OPP-041  : PASS
+TC-OPP-042  : PASS
+TC-OPP-043  : PASS
+TC-OPP-044  : PASS
+TC-OPP-045  : PASS
+TC-OPP-046  : PASS
+TC-OPP-047  : PASS
+TC-OPP-048  : PASS
+TC-OPP-049  : PASS
+TC-OPP-050  : PASS
+
+============================================================
+5. KEY EXECUTION OBSERVATIONS
+============================================================
+
+5.1 Opportunities List
+- List View opened successfully.
+- When no Opportunity records were available, the list displayed
+  "No Data".
+- The page counter displayed 0/0.
+- Pagination controls were available.
+- Multiple-page navigation could not be functionally exercised
+  because there were not enough Opportunity records.
+
+5.2 Kanban View
+- Kanban View opened successfully.
+- The observed stage columns were:
+  Prospecting
+  Qualification
+  Proposal
+  Negotiation
+  Closed Won
+
+5.3 Create Opportunity
+- Create Opportunity opened successfully.
+- Save and Cancel buttons were available.
+- The three-dot menu provided:
+  Save & Continue Editing
+  Save & New
+
+5.4 Mandatory Fields
+- Name was mandatory.
+- Leaving Name blank displayed:
+  "Not valid"
+  "Name field is required"
+- Amount was mandatory and validation worked when left blank.
+- Close Date was mandatory and validation worked when left blank.
+
+5.5 Account
+- Existing Account could be selected.
+- Create Account option was available.
+- Account control supported both selection and creation.
+
+5.6 Opportunity Stage
+The following stages were available and successfully selected:
+- Prospecting
+- Qualification
+- Proposal
+- Negotiation
+- Closed Won
+- Closed Lost
+
+5.7 Amount and Probability
+- Amount field was mandatory.
+- Amount displayed USD.
+- USD was not changeable.
+- Probability, % field was available.
+
+5.8 Close Date
+- Close Date was mandatory.
+- Calendar picker opened successfully.
+- A valid date could be selected.
+
+5.9 Contacts
+- Existing Contact could be selected.
+- Create Contact option was available.
+- Contact control supported both selection and creation.
+
+5.10 Lead Source
+The following values were available:
+- Call
+- Email
+- Existing Customer
+- Partner
+- Public Relation
+- Website
+- Campaign
+- Other
+
+5.11 Assigned User and Teams
+- Assigned User was available.
+- Admin was available for selection.
+- Teams selection was available.
+- Teams currently displayed No Data.
+
+5.12 Opportunity Creation
+- Opportunity was successfully created using valid mandatory data.
+- Cancel successfully terminated unsaved Opportunity creation.
+- Save & Continue Editing saved the Opportunity and kept the
+  editing form open.
+- Save & New saved the Opportunity and opened a new Create
+  Opportunity form.
+
+5.13 Kanban Quick Create
+The + controls were tested successfully for:
+- Prospecting
+- Qualification
+- Proposal
+- Negotiation
+- Closed Won
+
+Each opened the Create Opportunity form with the corresponding
+stage preselected.
+
+5.14 Create Opportunity Form
+The following fields were displayed:
+- Name
+- Account
+- Stage
+- Amount
+- Probability
+- Close Date
+- Contacts
+- Lead Source
+- Description
+- Assigned User
+- Teams
+
+The following actions were available:
+- Save
+- Cancel
+- Save & Continue Editing
+- Save & New
+
+============================================================
+6. DEFECT SUMMARY
+============================================================
+
+Confirmed Functional Defects : 0
+Development Fixes Required   : 0
+Test Data Limitations        : 2 observations
+Overall Defect Result        : No genuine functional defect confirmed
+
+Test-data/environment observations:
+
+1. Pagination
+Pagination controls were available, but multiple pages could not
+be exercised because there were insufficient Opportunity records.
+
+2. Teams
+Teams selection was available, but no Team records were available
+and the selection displayed No Data.
+
+Neither observation was classified as a functional defect.
+
+============================================================
+7. OVERALL CONCLUSION
+============================================================
+
+The EspoCRM Opportunities module successfully passed all 50
+executed functional test cases.
+
+Execution Result  : PASS
+Pass Rate          : 100%
+Functional Defects : 0
+
+The Opportunities module is considered functionally acceptable
+based on the executed test scope and available test data.
+
+============================================================
+8. RECOMMENDATIONS
+============================================================
+
+1. Create additional Opportunity records to validate pagination
+   across multiple pages.
+
+2. Create Team records to perform positive-path Teams selection
+   testing.
+
+3. Continue with deeper exploratory coverage in future iterations
+   if additional Opportunity actions or related-record functions
+   are identified.
+
+============================================================
+END OF DOCUMENT
+============================================================
