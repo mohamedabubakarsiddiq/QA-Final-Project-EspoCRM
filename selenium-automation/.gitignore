@@ -1,0 +1,13 @@
+# Maven build output
+target/
+
+# TestNG execution output
+test-output/
+
+# Local test configuration containing credentials
+src/test/resources/config.properties
+
+# Eclipse IDE metadata
+.classpath
+.project
+.settings/

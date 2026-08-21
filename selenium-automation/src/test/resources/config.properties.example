@@ -1,0 +1,5 @@
+baseUrl=http://localhost:8081
+browser=chrome
+username=admin
+password=Admin@12345
+explicitWait=15
