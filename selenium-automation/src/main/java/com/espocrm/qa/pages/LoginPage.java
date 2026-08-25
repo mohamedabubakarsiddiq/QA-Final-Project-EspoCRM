@@ -16,6 +16,7 @@ public class LoginPage {
 	 private By usernameField = By.xpath("//input[@id='field-userName']");
 	 private By passwordField = By.xpath("//input[@id='field-password']");
 	 private By loginButton = By.xpath("//button[@id='btn-login']");
+	 private By loginErrorMessage = By.xpath("//div[@class='message']");
 
 	 private WebDriverWait wait;
 	 
@@ -50,7 +51,7 @@ public class LoginPage {
 	
 	public void clickLogin() {
 		wait.until(
-				ExpectedConditions.elementToBeClickable(loginButton));
+				ExpectedConditions.elementToBeClickable(loginButton)).click();
 	}
 	
 	//Perform login
@@ -62,8 +63,17 @@ public class LoginPage {
 	}
 	
 	// verify successful login
-	public boolean isLoggesIn() {
-		return wait.until(ExpectedConditions.visibilityOfElementLocated(dashboardNavigation)).isDisplayed();
+	public boolean isLoggedIn() {
+		return wait.until(ExpectedConditions.visibilityOfElementLocated(
+				dashboardNavigation)).isDisplayed();
+	}
+	
+	public boolean isLoginErrorDisplayed() {
+	    return wait.until(
+	        ExpectedConditions.refreshed(
+	            ExpectedConditions.visibilityOfElementLocated(loginErrorMessage)
+	        )
+	    ).isDisplayed();
 	}
 	
 

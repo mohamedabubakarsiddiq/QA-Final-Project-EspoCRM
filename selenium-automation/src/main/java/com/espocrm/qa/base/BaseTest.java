@@ -1,19 +1,22 @@
 package com.espocrm.qa.base;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import com.espocrm.qa.utilities.ConfigReader;
+import com.espocrm.qa.utilities.DriverFactory;
 
 public class BaseTest {
 	
 	protected WebDriver driver;
 	
-	protected void setup() {
-		driver = new ChromeDriver();
+	protected void setUp() {
+		
+		String browser = ConfigReader.getProperty("browser");
+		
+		driver = DriverFactory.createDriver(browser);
 		
 		driver.manage().window().maximize();
 		
-		driver.get(ConfigReader.getProperty("baseUrl"));;
+		driver.get(ConfigReader.getProperty("baseUrl"));
 		
 	}
 	
