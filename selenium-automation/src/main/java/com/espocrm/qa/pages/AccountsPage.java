@@ -38,6 +38,11 @@ public class AccountsPage {
 	private By savingMessage =
 	        By.xpath("//div[contains(@class,'message') and normalize-space()='Saving...']");
 	
+	private By editAccountButton =
+			By.xpath("//button[@data-name='edit']");
+	
+	
+	
 	
 	public AccountsPage(WebDriver driver) {
 		this.driver=driver;
@@ -94,5 +99,43 @@ public class AccountsPage {
 				ExpectedConditions.visibilityOfElementLocated(accountNameOnDetailsPage)
 				).getText().trim();
 	}
+	
+	public void clickEditAccount() {
+		wait.until(
+				ExpectedConditions.elementToBeClickable(editAccountButton)
+				).click();
+	}
+	
+	public void  openAccount(String accountName) {
+		
+		By accountlink = By.xpath("//a[@class='link' and @title='" + accountName + "']");
+		
+		wait.until(ExpectedConditions.elementToBeClickable(accountlink)).click();
+	}
+	
+	public void editAccountName(String newAccountName) {
+		WebElement nameField = wait.until(
+				ExpectedConditions.visibilityOfElementLocated(accountNameField));
+		
+		nameField.clear();
+		nameField.sendKeys(newAccountName);
+		
+	}
+	
+	public String getAccountNameOnDetailsPage() {
+		
+		return wait.until(
+				ExpectedConditions.visibilityOfElementLocated(accountNameOnDetailsPage)
+				).getText().trim();
+		
+	}
+	
+	public void createAccount(String accountName) {
+		clickAccounts();
+		clickCreateAccount();
+		enterAccountName(accountName);
+		clickSaveAccount();
+	}
+	
 
 }

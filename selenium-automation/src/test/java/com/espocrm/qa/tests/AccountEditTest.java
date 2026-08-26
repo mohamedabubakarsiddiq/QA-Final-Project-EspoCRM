@@ -10,7 +10,7 @@ import com.espocrm.qa.pages.LoginPage;
 import com.espocrm.qa.utilities.AssertionUtils;
 import com.espocrm.qa.utilities.ConfigReader;
 
-public class AccountsCreateTest extends BaseTest {
+public class AccountEditTest extends BaseTest {
 	
 	private AccountsPage accountsPage;
 	
@@ -26,28 +26,34 @@ public class AccountsCreateTest extends BaseTest {
 		
 		accountsPage = new AccountsPage(driver);
 		
+		//Create test data specifically for this test
+		accountsPage.createAccount("Selenium Edit Test Account");
+		
 	}
-	
+
 	@Test
-	public void verifyCreateAccount() {
-
-		String accountName = "Selenium Test Account";
-
+	public void verifyEditAccount() {
+		
+		String exisitingAccountName = "Selenium Edit Test Account";
+		String updatedAccountName = "Selenium Edited Account";
+		
+		
 		accountsPage.clickAccounts();
-		accountsPage.clickCreateAccount();
-		accountsPage.enterAccountName(accountName);
+		accountsPage.openAccount(exisitingAccountName);
+		accountsPage.clickEditAccount();
+		accountsPage.editAccountName(updatedAccountName);
 		accountsPage.clickSaveAccount();
-
+		
 		AssertionUtils.assertEquals(
-		    accountsPage.getCreatedAccountName(),
-		    accountName,
-		    "Created Account Name is incorrect"
-		);
+				accountsPage.getAccountNameOnDetailsPage(), 
+				updatedAccountName,
+				"Account name was not updated successfully");
+		
 	}
 	
+	@AfterMethod
+	public void tearDownTest() {
+		tearDown();
+	}
 	
-	
-	 @AfterMethod public void tearDownTest() { tearDown(); } 
-	 
-
 }
