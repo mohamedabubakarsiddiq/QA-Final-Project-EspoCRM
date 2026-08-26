@@ -16,18 +16,18 @@ public class AccountsTest extends BaseTest {
 	
 	@BeforeMethod
 	public void setUpTest() {
+	
 		setUp();
+		
+		LoginPage loginPage = new LoginPage(driver);
+		
+		loginPage.login(ConfigReader.getProperty("username"),
+				ConfigReader.getProperty("password"));
+		
 		accountsPage = new AccountsPage(driver);
 		
-		//Login before accessing Accounts
-		LoginPage loginPage = new com.espocrm.qa.pages.LoginPage(driver);
-		
-		loginPage.login(
-				ConfigReader.getProperty("username"), 
-				ConfigReader.getProperty("password")
-				);
 	}
-	
+		
 	@Test
 	public void verifyAccountsModuleAccess() {
 		
@@ -35,14 +35,26 @@ public class AccountsTest extends BaseTest {
 		
 		AssertionUtils.assertTrue(
 				accountsPage.isAccountsPageDisplayed(),
-				"Accounts module should be accessible"
-				);
+				"Accounts module should be accessible");
+		
 	}
+	
+	@Test
+	public void verifyAccountsListDisplayed() {
+		accountsPage.clickAccounts();
+		
+		AssertionUtils.assertTrue(
+				accountsPage.isAccountListDisplayed(), 
+				"Accounts list should be displayed");
+	}
+	
+	
+	
+	
 	
 	@AfterMethod
 	public void tearDownTest() {
 		tearDown();
 	}
-	
 
 }
