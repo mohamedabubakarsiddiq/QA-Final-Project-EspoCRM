@@ -69,11 +69,13 @@ public class LoginPage {
 	}
 	
 	public boolean isLoginErrorDisplayed() {
-	    return wait.until(
-	        ExpectedConditions.refreshed(
-	            ExpectedConditions.visibilityOfElementLocated(loginErrorMessage)
-	        )
-	    ).isDisplayed();
+	    return wait.until(driver -> {
+	    	try {
+				return driver.findElement(loginErrorMessage).isDisplayed();
+			} catch (org.openqa.selenium.StaleElementReferenceException e) {
+				return false;
+			}
+	    });
 	}
 	
 
