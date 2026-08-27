@@ -41,6 +41,8 @@ public class AccountsPage {
 	private By editAccountButton =
 			By.xpath("//button[@data-name='edit']");
 	
+	private By accountSearchField =
+			By.xpath("//input[@data-name='textFilter']");
 	
 	
 	
@@ -136,6 +138,47 @@ public class AccountsPage {
 		enterAccountName(accountName);
 		clickSaveAccount();
 	}
+	
+	public void searchAccount(String accountName) {
+		WebElement searchField = wait.until(
+				ExpectedConditions.visibilityOfElementLocated(accountSearchField));
+	
+		searchField.clear();
+		searchField.sendKeys(accountName);
+	
+	}
+	
+	public boolean isAccountSearchResultDisplayed(String accountName) {
+		
+		By accountresult = By.xpath("//a[@class='link' and @title='" + accountName + "']"
+				);
+		
+		return wait.until(
+				ExpectedConditions.visibilityOfElementLocated(accountresult)
+				).isDisplayed();
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 
 }
