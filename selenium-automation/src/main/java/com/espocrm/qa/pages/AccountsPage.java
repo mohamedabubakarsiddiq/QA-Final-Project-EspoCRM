@@ -68,8 +68,56 @@ public class AccountsPage {
 	private By accountDeleteOption =
 			By.xpath("//a[@data-name='delete' and @data-action='delete']");
 	
+	private By accountNameValidationMessage =
+			By.xpath("//div[@class='message' and normalize-space()='Not valid']");
+		
+	private By cancelAccountButton =
+			By.xpath("//button[@data-name='cancel' and @data-action='cancel']");
 	
-			
+	private By websiteField =
+			By.xpath("//input[@data-name='website']");
+	
+	private By phoneNumberField =
+			By.xpath("//input[contains(@class,'phone-number')]");
+	
+	private By emailField =
+			By.xpath("//input[contains(@class,'email-address')]");
+	
+	private By descriptionField =
+			By.xpath("//textarea[@data-name='description']");
+	
+	private By accountDuplicateOption =
+			By.xpath("//a[@data-name='duplicate' and @data-action='duplicate']");
+	
+	private By duplicateWarning =
+			By.xpath("//div[contains(@class,'modal-body') and contains(@class,'body')]"
+		               + "//h4[normalize-space()='The record you are creating might already exist']");
+	
+	private By duplicateModal =
+	        By.xpath("//div[contains(@class,'modal-body') and contains(@class,'body')]");
+	
+	private By duplicateCancelButton =
+			By.xpath("//button[@data-name='cancel' and normalize-space()='Cancel']");
+	
+	private By duplicateWarningCancelButton =
+	        By.xpath("//div[contains(@class,'dialog') and contains(@class,'modal') and @role='dialog'"
+	               + "][.//h4[normalize-space()='The record you are creating might already exist']]"
+	               + "//button[@data-name='cancel']");
+	
+	private By duplicateWarningDialog =
+	        By.xpath("//div[contains(@class,'dialog') and contains(@class,'modal') and @role='dialog'"
+	               + "][.//h4[normalize-space()='The record you are creating might already exist']]");
+	
+	private By deleteConfirmationMessage = 
+			By.xpath("//span[contains(@class,'confirm-message')]"
+               + "//p[normalize-space()='Are you sure you want to remove the record?']");
+	
+	private By deleteConfirmationCancelButton =
+	        By.xpath("//span[contains(@class,'confirm-message')]" +
+	                 "/ancestor::div[contains(@class,'dialog') or contains(@class,'modal')]" +
+	                 "//button[@data-name='cancel']");
+	
+	
 	
 	
 	public AccountsPage(WebDriver driver) {
@@ -260,10 +308,78 @@ public class AccountsPage {
 				).click();
 	}
 	
+	public boolean isAccountnameValidationDisplayed() {
+		return wait.until(
+				ExpectedConditions.visibilityOfElementLocated
+				(accountNameValidationMessage)).isDisplayed();
+	}
 	
+	public void clickCancelAccount() {
+		
+		wait.until(
+				ExpectedConditions.elementToBeClickable(cancelAccountButton)
+				).click();
+	}
 	
+	public void enterWebsite(String website) {
+		wait.until(
+				ExpectedConditions.visibilityOfElementLocated(websiteField)
+				).sendKeys(website);
+	}
 	
+	public void enterPhoneNumber (String phoneNumber) {
+		wait.until(
+				ExpectedConditions.visibilityOfElementLocated(phoneNumberField)
+				).sendKeys(phoneNumber);
+	}
 	
+	public void enterEmail(String email) {
+		wait.until(
+				ExpectedConditions.visibilityOfElementLocated(emailField)
+				).sendKeys(email);
+	}
+	
+	public void enterDescription(String description) {
+		wait.until(
+				ExpectedConditions.visibilityOfElementLocated(descriptionField)
+				).sendKeys(description);
+	}
+	
+	public void clickAccountDuplicate() {
+		wait.until(
+				ExpectedConditions.elementToBeClickable(accountDuplicateOption)
+				).click();
+	}
+	
+	public boolean isDuplicateWarningDisplayed() {
+	    return wait.until(
+	            ExpectedConditions.visibilityOfElementLocated(duplicateWarningDialog)
+	    ).isDisplayed();
+	}
+	
+	public void clickDuplicateCancel() {
+		wait.until(
+				ExpectedConditions.elementToBeClickable(duplicateCancelButton)
+				).click();
+	}
+	
+	public void clickDuplicateWarningCancel() {
+	    wait.until(
+	            ExpectedConditions.elementToBeClickable(duplicateWarningCancelButton)
+	    ).click();
+	}
+	
+	public boolean isDeleteConfirmationDisplayed() {
+		return wait.until(
+				ExpectedConditions.visibilityOfElementLocated(deleteConfirmationMessage)
+				).isDisplayed();
+	}
+	
+	public void cancelDeleteConfirmation() {
+	    wait.until(
+	            ExpectedConditions.elementToBeClickable(deleteConfirmationCancelButton)
+	    ).click();
+	}
 	
 	
 	

@@ -71,6 +71,23 @@ public class AccountDeleteTest extends BaseTest{
 	  "Account should be deleted successfully" );
 	  
 	  }
+	  
+	  @Test
+	  public void verifyDeleteConfirmationDispplayed() {
+		  
+		  String accountName ="Selenium Test Account";
+		  
+		  accountsPage.clickAccounts();
+		  accountsPage.openAccount(accountName);
+		  accountsPage.clickAccountMoreActions();
+		  accountsPage.clickAccountDeleteOption();
+		  
+		  AssertionUtils.assertTrue(accountsPage.isDeleteConfirmationDisplayed(),
+				  "Delete confirmation message should be displayed");
+		  
+		  accountsPage.cancelDeleteConfirmation();
+		  
+	  }
 	 
 	
 	
