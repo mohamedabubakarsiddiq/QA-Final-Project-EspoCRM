@@ -21,7 +21,7 @@ public class AccountsPage {
 			By.xpath("//div[@class='breadcrumb-item']/span");
 	
 	private By accountsList =
-			By.xpath("//div[@class='list  ']");
+			By.cssSelector("div.list");
 	
 	private By createAcccountButton = 
 			By.xpath("//a[@data-name='create']");
@@ -44,6 +44,32 @@ public class AccountsPage {
 	private By accountSearchField =
 			By.xpath("//input[@data-name='textFilter']");
 	
+	private By clickRemoveAccount =
+			By.xpath("//a[@data-action='quickRemove']");
+	
+	private By accountRowDropdown(String accountName) {
+		return By.xpath("//tr[@class='list-row' and .//a[@title='" + accountName + "']]"
+		        + "//span[@class='caret']");
+	}
+	
+	private By removeAccountOption(String accountName) {
+	    return By.xpath(
+	        "//tr[@class='list-row' and .//a[@title='" + accountName + "']]"
+	        + "//a[@data-action='quickRemove']"
+	    );
+	}
+	
+	private By confirmRemoveButton =
+			By.xpath("//button[@data-name='confirm']");
+	
+	private By accountMoreActionsButton =
+			By.xpath("//button[@data-toggle='dropdown' and contains(@class,'dropdown-item-list-button')]");
+	
+	private By accountDeleteOption =
+			By.xpath("//a[@data-name='delete' and @data-action='delete']");
+	
+	
+			
 	
 	
 	public AccountsPage(WebDriver driver) {
@@ -54,6 +80,8 @@ public class AccountsPage {
 	public void clickAccounts() {
 		wait.until(ExpectedConditions.elementToBeClickable(accountsNavigation)
 				).click();
+		
+		wait.until(ExpectedConditions.visibilityOfElementLocated(accountsList));
 	}
 	
 	public boolean isAccountsPageDisplayed() {
@@ -67,6 +95,8 @@ public class AccountsPage {
 				ExpectedConditions.visibilityOfElementLocated(accountsList)
 				).isDisplayed();
 	}
+	
+	
 	
 	public void clickCreateAccount() {
 		wait.until(
@@ -140,12 +170,17 @@ public class AccountsPage {
 	}
 	
 	public void searchAccount(String accountName) {
-		WebElement searchField = wait.until(
-				ExpectedConditions.visibilityOfElementLocated(accountSearchField));
-	
-		searchField.clear();
-		searchField.sendKeys(accountName);
-	
+
+	    wait.until(
+	            ExpectedConditions.visibilityOfElementLocated(accountsList)
+	    );
+
+	    WebElement searchField = wait.until(
+	            ExpectedConditions.visibilityOfElementLocated(accountSearchField)
+	    );
+
+	    searchField.clear();
+	    searchField.sendKeys(accountName);
 	}
 	
 	public boolean isAccountSearchResultDisplayed(String accountName) {
@@ -159,19 +194,71 @@ public class AccountsPage {
 		
 	}
 	
+	public void clickAccountRowDropdown(String accountName) {
+
+	    By accountLink = By.xpath(
+	        "//tr[contains(@class,'list-row')]//a[@title='" + accountName + "']"
+	    );
+
+	    By dropdownButton = By.xpath(
+	        "//tr[contains(@class,'list-row') and .//a[@title='" + accountName + "']]"
+	        + "//button[contains(@class,'dropdown-toggle')]"
+	    );
+
+	    wait.until(
+	        ExpectedConditions.visibilityOfElementLocated(accountLink)
+	    );
+
+	    wait.until(
+	        ExpectedConditions.elementToBeClickable(dropdownButton)
+	    ).click();
+	}
+	
+	public void clickRemoveAccount(String accountName) {
+
+	    By removeOption = By.xpath(
+	        "//tr[contains(@class,'list-row') and .//a[@title='" + accountName + "']]"
+	        + "//a[@data-action='quickRemove']"
+	    );
+
+	    wait.until(
+	        ExpectedConditions.elementToBeClickable(removeOption)
+	    ).click();
+	}
+
+	public void confirmRemoveAccount() {
+	    wait.until(
+	        ExpectedConditions.elementToBeClickable(confirmRemoveButton)
+	    ).click();
+	}
+	
+	public boolean isAccountDeleted(String accountName) {
+		By accountLink = By.xpath("//tr[contains(@class,'list-row')]//a[@title='" + accountName + "']");
+		
+		return wait.until(
+				ExpectedConditions.invisibilityOfElementLocated(accountLink));
+	}
+	
+	public boolean isAccountPresent(String accountName) {
+		
+		By accountLink = By.xpath( "//a[@class='link' and @title='" + accountName + "']");
+		
+		return !driver.findElements(accountLink).isEmpty();
+		
+	}
 	
 	
+	public void clickAccountMoreActions() {
+		wait.until(
+				ExpectedConditions.elementToBeClickable(accountMoreActionsButton)
+				).click();
+	}
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	public void clickAccountDeleteOption() {
+		wait.until(
+				ExpectedConditions.elementToBeClickable(accountDeleteOption)
+				).click();
+	}
 	
 	
 	

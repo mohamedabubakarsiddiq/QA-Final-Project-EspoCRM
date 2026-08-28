@@ -13,6 +13,8 @@ import com.espocrm.qa.utilities.ConfigReader;
 public class AccountEditTest extends BaseTest {
 	
 	private AccountsPage accountsPage;
+	private String accountName;
+	private String updatedAccountName;
 	
 	@BeforeMethod
 	public void setUpTest() {
@@ -26,20 +28,21 @@ public class AccountEditTest extends BaseTest {
 		
 		accountsPage = new AccountsPage(driver);
 		
-		//Create test data specifically for this test
-		accountsPage.createAccount("Selenium Edit Test Account");
 		
 	}
 
 	@Test
 	public void verifyEditAccount() {
 		
-		String exisitingAccountName = "Selenium Edit Test Account";
-		String updatedAccountName = "Selenium Edited Account";
+		String uniqueId = String.valueOf(System.currentTimeMillis());
 		
+		String accountName = "Selenium Edit Test Account" + uniqueId;
+		String updatedAccountName = "Selenium Edited Account" + uniqueId;
+		
+		accountsPage.createAccount(accountName);
 		
 		accountsPage.clickAccounts();
-		accountsPage.openAccount(exisitingAccountName);
+		accountsPage.openAccount(accountName);
 		accountsPage.clickEditAccount();
 		accountsPage.editAccountName(updatedAccountName);
 		accountsPage.clickSaveAccount();
@@ -53,7 +56,18 @@ public class AccountEditTest extends BaseTest {
 	
 	@AfterMethod
 	public void tearDownTest() {
-		tearDown();
+		try {
+			if (updatedAccountName != null) {
+				accountsPage.clickAccounts();
+				accountsPage.openAccount(updatedAccountName);
+				accountsPage.clickAccountMoreActions();
+				accountsPage.clickAccountDeleteOption();
+				accountsPage.confirmRemoveAccount();
+			}
+		} finally {
+			tearDown();
+		} 
+		
 	}
 	
 }

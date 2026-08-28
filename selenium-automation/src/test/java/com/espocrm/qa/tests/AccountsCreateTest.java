@@ -14,6 +14,8 @@ public class AccountsCreateTest extends BaseTest {
 	
 	private AccountsPage accountsPage;
 	
+	private String accountName;
+	
 	@BeforeMethod
 	public void setUpTest() {
 		setUp();
@@ -31,7 +33,7 @@ public class AccountsCreateTest extends BaseTest {
 	@Test
 	public void verifyCreateAccount() {
 
-		String accountName = "Selenium Test Account";
+		accountName = "Selenium Test Account" + System.currentTimeMillis();
 
 		accountsPage.clickAccounts();
 		accountsPage.clickCreateAccount();
@@ -47,7 +49,22 @@ public class AccountsCreateTest extends BaseTest {
 	
 	
 	
-	 @AfterMethod public void tearDownTest() { tearDown(); } 
-	 
+	 @AfterMethod public void tearDownTest() { 
+		 
+		 try {
+			if (accountName != null) {
+				accountsPage.clickAccounts();
+				accountsPage.openAccount(accountName);
+				accountsPage.clickAccountMoreActions();
+				accountsPage.clickAccountDeleteOption();
+				accountsPage.confirmRemoveAccount();
+			}
+		} finally {
+			tearDown();
+		}
+		}}
+		 
+		 
+		
 
-}
+

@@ -14,6 +14,7 @@ public class AccountSearchTest extends BaseTest{
 	
 	private AccountsPage accountsPage;
 	
+	
 	@BeforeMethod
 	public void setUpTest() {
 		setUp();
@@ -26,16 +27,17 @@ public class AccountSearchTest extends BaseTest{
 		
 		accountsPage = new AccountsPage(driver);
 		
-		accountsPage.createAccount("Selenium Search Test Account");
 		
 	}
 	
 	@Test
 	public void verifyAccountSearch() {
 		
-		String accountName = "Selenium Search Test Account";
+		String accountName = "Selenium Test Account1787845161331";
 		
 		accountsPage.clickAccounts();
+		
+		
 		accountsPage.searchAccount(accountName);
 		
 		AssertionUtils.assertTrue(accountsPage.isAccountSearchResultDisplayed(accountName),
