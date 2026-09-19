@@ -33,7 +33,7 @@ public class AccountSearchTest extends BaseTest{
 	@Test
 	public void verifyAccountSearch() {
 		
-		String accountName = "Selenium Test Account1787845161331";
+		String accountName = "Selenium Test Account";
 		
 		accountsPage.clickAccounts();
 		

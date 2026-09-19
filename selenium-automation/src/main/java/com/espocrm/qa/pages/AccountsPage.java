@@ -117,6 +117,33 @@ public class AccountsPage {
 	                 "/ancestor::div[contains(@class,'dialog') or contains(@class,'modal')]" +
 	                 "//button[@data-name='cancel']");
 	
+	private By viewPersonalDataOption =
+			By.xpath("//a[normalize-space()='View Personal Data']");
+	
+	private By personalDataDialog(String accountName) {
+	    return By.xpath(
+	        "//*[contains(normalize-space(), 'Personal Data:')"
+	        + " and contains(normalize-space(), '" + accountName + "')]"
+	    );
+	}
+
+	private By personalDataCloseButton(String accountName) {
+	    return By.xpath(
+	        "//*[contains(normalize-space(), 'Personal Data:')"
+	        + " and contains(normalize-space(), '" + accountName + "')]"
+	        + "/ancestor::div[contains(@class,'dialog') or contains(@class,'modal')]"
+	        + "//button[normalize-space()='Close']"
+	    );
+	}
+	
+	private By followButton =
+	        By.xpath("//button[@data-name='follow' and @data-action='follow']");
+
+	private By followedButton =
+	        By.xpath("//button[@data-name='unfollow' and @data-action='unfollow']");
+	
+	
+	
 	
 	
 	
@@ -380,6 +407,87 @@ public class AccountsPage {
 	            ExpectedConditions.elementToBeClickable(deleteConfirmationCancelButton)
 	    ).click();
 	}
+	
+	public void clickViewPersonalData() {
+	    wait.until(
+	            ExpectedConditions.elementToBeClickable(viewPersonalDataOption)
+	    ).click();
+	}
+
+	public boolean isPersonalDataDisplayed(String accountName) {
+	    return wait.until(
+	            ExpectedConditions.visibilityOfElementLocated(
+	                    personalDataDialog(accountName)
+	            )
+	    ).isDisplayed();
+	}
+
+	public void closePersonalData(String accountName) {
+	    wait.until(
+	            ExpectedConditions.elementToBeClickable(
+	                    personalDataCloseButton(accountName)
+	            )
+	    ).click();
+	}
+	
+	public boolean isFollowButtonDisplayed() {
+	    return !driver.findElements(followButton).isEmpty()
+	            && driver.findElements(followButton).get(0).isDisplayed();
+	}
+
+	public boolean isFollowedButtonDisplayed() {
+	    return !driver.findElements(followedButton).isEmpty()
+	            && driver.findElements(followedButton).get(0).isDisplayed();
+	}
+	
+	public boolean waitForFollowButtonDisplayed() {
+	    return wait.until(
+	            ExpectedConditions.visibilityOfElementLocated(followButton)
+	    ).isDisplayed();
+	}
+
+	public boolean waitForFollowedButtonDisplayed() {
+	    return wait.until(
+	            ExpectedConditions.visibilityOfElementLocated(followedButton)
+	    ).isDisplayed();
+	}
+
+	public void clickFollow() {
+	    wait.until(
+	            ExpectedConditions.elementToBeClickable(followButton)
+	    ).click();
+	}
+
+	public void clickFollowed() {
+	    wait.until(
+	            ExpectedConditions.elementToBeClickable(followedButton)
+	    ).click();
+	}
+	
+	public void printFollowStateDebug() {
+
+	    System.out.println("=== FOLLOW STATE DEBUG ===");
+
+	    var elements = driver.findElements(
+	            By.xpath("//button[@data-name='follow' or @data-name='unfollow']")
+	    );
+
+	    System.out.println("Buttons found: " + elements.size());
+
+	    for (WebElement element : elements) {
+	        System.out.println(
+	                "data-name=" + element.getAttribute("data-name")
+	                + ", data-action=" + element.getAttribute("data-action")
+	                + ", text=" + element.getText()
+	                + ", displayed=" + element.isDisplayed()
+	                + ", enabled=" + element.isEnabled()
+	        );
+	    }
+
+	    System.out.println("=== END FOLLOW STATE DEBUG ===");
+	}
+	
+	
 	
 	
 	
