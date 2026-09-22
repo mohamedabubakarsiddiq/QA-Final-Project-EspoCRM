@@ -29,6 +29,20 @@ Leads and Opportunities were part of the earlier project baseline but are **de-s
 - **1 Failed**
 - **2 open defects:** BUG-ACC-001 and BUG-CON-001
 
+## Latest Selenium Automation Regression
+
+The latest Maven/TestNG regression was executed successfully on the current automation framework.
+
+- **20 tests executed**
+- **20 Passed**
+- **0 Failed**
+- **0 Errors**
+- **0 Skipped**
+- **Build: SUCCESS**
+- **Execution time: 13 minutes 2 seconds**
+
+The regression includes the current implemented Accounts automation coverage, including the Accounts Followers workflow. The Followers test class may be temporarily commented during mentor/demo review and can be enabled when required for executable regression runs.
+
 ## Project Objectives
 
 - Perform functional and regression testing
@@ -117,4 +131,3 @@ Two confirmed/open defects remain in the current manual-testing baseline:
 
 - **BUG-ACC-001:** Accounts Audit Log displays “Locked” after an Account is unlocked.
 - **BUG-CON-001:** Contacts Starred Email selection is not visibly retained after saving and reopening a Contact.
-
