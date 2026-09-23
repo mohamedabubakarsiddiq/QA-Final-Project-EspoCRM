@@ -10,7 +10,7 @@ import com.espocrm.qa.pages.LoginPage;
 import com.espocrm.qa.utilities.AssertionUtils;
 import com.espocrm.qa.utilities.ConfigReader;
 
-public class AccountsFollowersTest extends BaseTest {
+public class AccountsAuditLogTest extends BaseTest {
 
     private AccountsPage accountsPage;
 
@@ -27,38 +27,26 @@ public class AccountsFollowersTest extends BaseTest {
         );
 
         accountsPage = new AccountsPage(driver);
+        accountsPage.clickAccounts();
     }
 
     @Test
-    public void verifyFollowAccount() {
+    public void verifyAccountAuditLog() {
 
         String accountName = "Test Account 004";
 
-        accountsPage.clickAccounts();
         accountsPage.openAccount(accountName);
-
-        // Reset to initial state if the account is already followed
-        if (accountsPage.isFollowedButtonDisplayed()) {
-            accountsPage.clickFollowed();
-        }
+        accountsPage.clickAccountMoreActions();
+        accountsPage.clickViewAuditLog();
 
         AssertionUtils.assertTrue(
-                accountsPage.waitForFollowButtonDisplayed(),
-                "Follow button should be displayed for the account"
+                accountsPage.isAuditLogDisplayed(),
+                "Audit Log should be displayed"
         );
 
-        accountsPage.clickFollow();
-
         AssertionUtils.assertTrue(
-                accountsPage.waitForFollowedButtonDisplayed(),
-                "Follow button should change to Followed after clicking Follow"
-        );
-
-        accountsPage.clickFollowed();
-
-        AssertionUtils.assertTrue(
-                accountsPage.waitForFollowButtonDisplayed(),
-                "Followed button should change back to Follow after unfollowing"
+                accountsPage.isAuditLogEntryDisplayed(),
+                "Audit Log should contain account update entries"
         );
     }
 

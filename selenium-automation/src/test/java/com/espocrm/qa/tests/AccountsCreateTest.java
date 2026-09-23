@@ -99,42 +99,193 @@ public class AccountsCreateTest extends BaseTest {
 	
 	@Test
 	public void verifyCreatedAccountAppearsInList() {
-		
-		
-		
-		accountName = "Selenium List Verification Account" + System.currentTimeMillis();
-		
-		
-	accountsPage.clickAccounts();
-	accountsPage.clickCreateAccount();
-	accountsPage.enterAccountName(accountName);
-	accountsPage.clickSaveAccount();
+
+	    accountName = "Selenium List Verification Account" + System.currentTimeMillis();
+
+	    accountsPage.clickAccounts();
+	    accountsPage.clickCreateAccount();
+	    accountsPage.enterAccountName(accountName);
+	    accountsPage.clickSaveAccount();
+
+	    accountsPage.clickAccounts();
+
+	    // Search for the newly created account
+	    accountsPage.searchAccount(accountName);
+
+	    // Wait until the searched account is actually displayed
+	    AssertionUtils.assertTrue(
+	            accountsPage.isAccountSearchResultDisplayed(accountName),
+	            "Newly created account should be displayed in the accounts list"
+	    );
+	}
 	
-	accountsPage.clickAccounts();
+	@Test
+	public void verifyWebsiteField() {
+
+	    accountName = "Selenium Website Test Account" + System.currentTimeMillis();
+	    String website = "https://example.com";
+
+	    accountsPage.clickAccounts();
+	    accountsPage.clickCreateAccount();
+
+	    accountsPage.enterAccountName(accountName);
+	    accountsPage.enterWebsite(website);
+
+	    AssertionUtils.assertEquals(
+	            accountsPage.getWebsiteValue(),
+	            website,
+	            "Website field value is incorrect"
+	    );
+
+	    accountsPage.clickSaveAccount();
+
+	    AssertionUtils.assertEquals(
+	            accountsPage.getCreatedAccountName(),
+	            accountName,
+	            "Account with Website field was not created successfully"
+	    );
+	}
+
+	@Test
+	public void verifyPhoneField() {
+
+	    accountName = "Selenium Phone Test Account" + System.currentTimeMillis();
+	    String phone = "9876543210";
+
+	    accountsPage.clickAccounts();
+	    accountsPage.clickCreateAccount();
+
+	    accountsPage.enterAccountName(accountName);
+	    accountsPage.enterPhoneNumber(phone);
+
+	    AssertionUtils.assertEquals(
+	            accountsPage.getPhoneNumberValue(),
+	            phone,
+	            "Phone field value is incorrect"
+	    );
+
+	    accountsPage.clickSaveAccount();
+
+	    AssertionUtils.assertEquals(
+	            accountsPage.getCreatedAccountName(),
+	            accountName,
+	            "Account with Phone field was not created successfully"
+	    );
+	}
+
+	@Test
+	public void verifyEmailField() {
+
+	    accountName = "Selenium Email Test Account" + System.currentTimeMillis();
+	    String email =
+	            "testaccount" + System.currentTimeMillis() + "@example.com";
+
+	    accountsPage.clickAccounts();
+	    accountsPage.clickCreateAccount();
+
+	    accountsPage.enterAccountName(accountName);
+	    accountsPage.enterEmail(email);
+
+	    AssertionUtils.assertEquals(
+	            accountsPage.getEmailValue(),
+	            email,
+	            "Email field value is incorrect"
+	    );
+
+	    accountsPage.clickSaveAccount();
+
+	    AssertionUtils.assertEquals(
+	            accountsPage.getCreatedAccountName(),
+	            accountName,
+	            "Account with Email field was not created successfully"
+	    );
+	}
+
+	@Test
+	public void verifyDescriptionField() {
+
+	    accountName = "Selenium Description Test Account"
+	            + System.currentTimeMillis();
+
+	    String description = "Automation test description";
+
+	    accountsPage.clickAccounts();
+	    accountsPage.clickCreateAccount();
+
+	    accountsPage.enterAccountName(accountName);
+	    accountsPage.enterDescription(description);
+
+	    AssertionUtils.assertEquals(
+	            accountsPage.getDescriptionValue(),
+	            description,
+	            "Description field value is incorrect"
+	    );
+
+	    accountsPage.clickSaveAccount();
+
+	    AssertionUtils.assertEquals(
+	            accountsPage.getCreatedAccountName(),
+	            accountName,
+	            "Account with Description field was not created successfully"
+	    );
+	}
 	
-	AssertionUtils.assertTrue(accountsPage.isAccountPresent(accountName),
-			"Newly created account should be displayed in the accounts list");
-		
+	@Test
+	public void verifyInvalidEmailValidation() {
+
+	    String accountName =
+	            "Selenium Invalid Email Test Account"
+	                    + System.currentTimeMillis();
+
+	    accountsPage.clickAccounts();
+	    accountsPage.clickCreateAccount();
+
+	    accountsPage.enterAccountName(accountName);
+	    accountsPage.enterEmail("invalid-email");
+
+	    accountsPage.clickSaveAccount();
+
+	    AssertionUtils.assertTrue(
+	            accountsPage.isValidationMessageDisplayed(),
+	            "Not valid validation message should be displayed for invalid email"
+	    );
+	}
+	
+	@Test
+	public void verifyInvalidPhoneValidation() {
+
+	    String accountName =
+	            "Selenium Invalid Phone Test Account"
+	                    + System.currentTimeMillis();
+
+	    accountsPage.clickAccounts();
+	    accountsPage.clickCreateAccount();
+
+	    accountsPage.enterAccountName(accountName);
+	    accountsPage.enterPhoneNumber("abc123");
+
+	    accountsPage.clickSaveAccount();
+
+	    AssertionUtils.assertTrue(
+	            accountsPage.isValidationMessageDisplayed(),
+	            "Not valid validation message should be displayed for invalid phone"
+	    );
 	}
 	
 	
-	
-	
-	
-	 @AfterMethod public void tearDownTest() { 
-		 
-		 try {
-			if (accountName != null) {
-				accountsPage.clickAccounts();
-				accountsPage.openAccount(accountName);
-				accountsPage.clickAccountMoreActions();
-				accountsPage.clickAccountDeleteOption();
-				accountsPage.confirmRemoveAccount();
-			}
-		} finally {
-			tearDown();
-		}
-	 }
+	@AfterMethod
+	public void tearDownTest() {
+
+	    try {
+
+	        if (accountName != null) {
+	            accountsPage.deleteAccountIfPresent(accountName);
+	        }
+
+	    } finally {
+	        tearDown();
+	    }
+	}
 }
 
 		 
