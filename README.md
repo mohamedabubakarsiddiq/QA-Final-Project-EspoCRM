@@ -29,19 +29,33 @@ Leads and Opportunities were part of the earlier project baseline but are **de-s
 - **1 Failed**
 - **2 open defects:** BUG-ACC-001 and BUG-CON-001
 
-## Latest Selenium Automation Regression
+## Current Selenium Automation Baseline
 
-The latest Maven/TestNG regression was executed successfully on the current automation framework.
+The current automation framework contains **31 TestNG test methods** across Login and Accounts automation classes.
 
-- **20 tests executed**
-- **20 Passed**
+For the current Accounts manual baseline:
+
+- **36 manual Accounts test cases**
+- **29 directly automated**
+- **2 partially covered**
+- **5 not yet automated**
+- **80.6% direct automation coverage**
+
+The automated Accounts coverage includes access/list verification, account creation and validation, search, edit, delete, duplicate handling, personal data, followers, filters, audit log, user access, phone validation, and lock/unlock workflows.
+
+### Latest Maven/TestNG Full Regression
+
+The latest full regression was executed successfully on **23-Sep-2026**:
+
+- **34 test invocations executed**
+- **34 Passed**
 - **0 Failed**
 - **0 Errors**
 - **0 Skipped**
 - **Build: SUCCESS**
-- **Execution time: 13 minutes 2 seconds**
+- **Execution time: 13 minutes 17 seconds**
 
-The regression includes the current implemented Accounts automation coverage, including the Accounts Followers workflow. The Followers test class may be temporarily commented during mentor/demo review and can be enabled when required for executable regression runs.
+The count of 34 executions is higher than the 31 test methods because LoginTest.verifyLogin uses a TestNG data provider with four login data sets.
 
 ## Project Objectives
 
